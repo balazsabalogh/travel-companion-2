@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173853"/><stop offset="1" stop-color="#0b2034"/></linearGradient></defs>
+<rect width="320" height="220" rx="28" fill="url(#g)"/>
+<circle cx="160" cy="112" r="78" fill="#e8bd5e" opacity=".12"/>
+<g fill="none" stroke="#e8bd5e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M160 46l18 38 42 6-30 30 8 42-38-20-38 20 8-42-30-30 42-6 18-38z"/></g>
+<text x="160" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#d9e5ed" font-weight="700">PROGRAM</text>
+</svg>
