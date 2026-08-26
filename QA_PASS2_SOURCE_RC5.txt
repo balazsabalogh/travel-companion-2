@@ -1,0 +1,44 @@
+PASS HTML ids unique 
+PASS one function save — 1
+PASS one function renderDayMap — 1
+PASS one function setSheet — 1
+PASS one function renderPoiSheet — 1
+PASS one function renderRouteSheet — 1
+PASS one function bindPlannerGestures — 1
+PASS one function bindPlannerReorder — 1
+PASS one function renderSonarSheet — 1
+PASS one function showDays — 1
+PASS one function showDaysCompact — 1
+PASS one function showSettings — 1
+PASS one function openFunction — 1
+PASS one function startNavigation — 1
+PASS one function endNavigation — 1
+PASS one function returnHome — 1
+PASS one function bindUI — 1
+PASS no stale RC4 cache 
+PASS no legacy logo onclick sonar 
+PASS no POI primary Megnéztem 
+PASS route reorder gesture excludes card swipe 
+PASS reorder cleanup removes global listeners 
+PASS reorder snapshot before save 
+PASS navigation external transit still separate 
+PASS Companion steps do not invent transit routes 
+PASS nav step instructions from route API 
+PASS nav steps close redraws route 
+PASS normal overlay close restores active nav route 
+PASS fullscreen classes cleaned on hard close 
+PASS fullscreen map chrome hidden 
+PASS notification drawer no handle 
+PASS Sonar not duplicated in main dock 
+PASS main dock exactly six tabs — 6
+PASS 4 manifest icons — 4
+PASS icon exists ./icon-192.png 
+PASS icon exists ./icon-512.png 
+PASS icon exists ./icon-maskable-192.png 
+PASS icon exists ./icon-maskable-512.png 
+PASS maskable 512 distinct 
+PASS all route ids valid 
+PASS RC5 CSS tail after RC4 
+PASS RC5 fullscreen rule is in final RC5 block 
+
+Independent source audit: 42/42 passed

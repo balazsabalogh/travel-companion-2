@@ -1,0 +1,16 @@
+PASS route short tap half 
+PASS logo tap home not sonar 
+PASS logo hold sonar 
+PASS sonar radius one row — [574.6, 574.8, 574.8, 575.0]
+PASS route handle expands full 
+PASS full body class 
+PASS route drag reorder — ['Suite Laguna Otel', 'Migros']->['Migros', 'Suite Laguna Otel']
+PASS POI mini opens 
+PASS mini contrast — rgb(245, 247, 248)/rgb(16, 42, 67)
+PASS POI actions order — ['Guide', 'Kivétel', 'Navigáció', 'Kedvenc', 'Megosztás']
+PASS navigation steps fullscreen 
+PASS navigation steps list 
+PASS navigation steps return closes overlay 
+PASS light mini remains legible — rgb(245, 247, 248)/rgb(16, 42, 67)
+
+UI inline QA 14/14 passed

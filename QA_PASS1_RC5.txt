@@ -1,0 +1,75 @@
+PASS app.js syntax 
+PASS service worker syntax 
+PASS CSS braces — 1067/1067
+PASS RC5 version — 0.7.9-rc5
+PASS RC5 SW cache 
+PASS HTML cache-bust RC5 
+PASS unique mainItinerary 
+PASS unique mainDays 
+PASS unique mainFavorites 
+PASS unique mainSettings 
+PASS unique mainNotifications 
+PASS unique mainNavigation 
+PASS unique companionLogo 
+PASS no separate sonar tab 
+PASS logo short tap home 
+PASS logo long hold sonar 
+PASS POI action order Guide first 
+PASS POI action Navigation third 
+PASS Megnéztem removed from POI primary 
+PASS mini POI isolated CSS 
+PASS mini POI light contrast forced 
+PASS POI full closes to same mini 
+PASS route tap half 
+PASS route hold full 
+PASS route handle toggles half/full 
+PASS route handle large target 
+PASS reorder window pointer tracker 
+PASS reorder autoscroll 
+PASS reorder save persistence 
+PASS reorder only handle starts 
+PASS route day swipe 
+PASS route action buttons stay outside scroll 
+PASS planner list scroll isolated 
+PASS swipe action exact layer 
+PASS sonar distance row 4 cols 
+PASS sonar half compact 
+PASS sonar saved shortcut 
+PASS continuous GPS 
+PASS Apple transit 
+PASS Google transit 
+PASS no fabricated transit timing 
+PASS navigation detail fetch 
+PASS navigation steps view 
+PASS nav banner tap opens steps 
+PASS navigation steps map return 
+PASS return to map redraws route 
+PASS home during navigation restores route 
+PASS active nav menu opens steps not ends 
+PASS sheet fullscreen body class 
+PASS overlay fullscreen body class 
+PASS fullscreen hides map 
+PASS fullscreen hides map controls 
+PASS fullscreen hides attribution 
+PASS no map beta badge 
+PASS settings has test environment 
+PASS route persistence 
+PASS safe storage 
+PASS museum not in live routes 
+PASS museum restore filter 
+PASS offline map guard 
+PASS all local refs packaged 
+PASS single def setSheet — 1
+PASS single def renderRouteSheet — 1
+PASS single def bindPlannerReorder — 1
+PASS single def renderSonarSheet — 1
+PASS single def startNavigation — 1
+PASS single def drawNavigationRoute — 1
+PASS single def showNavigationSteps — 1
+PASS single def closeNavigationSteps — 1
+PASS single def openOverlay — 1
+PASS single def hardCloseOverlay — 1
+PASS single def returnHome — 1
+PASS single def bindUI — 1
+
+PASS1 73/73

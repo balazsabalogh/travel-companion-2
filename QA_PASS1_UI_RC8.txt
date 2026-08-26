@@ -1,0 +1,22 @@
+PASS App JS loaded
+PASS Compact days aligned to dock — {'aL': 10, 'aR': 404, 'nL': 10, 'nR': 404, 'pL': 11, 'pR': 403, 'shadow': 'rgba(0, 0, 0, 0.95) 0px 2px 8px, rgba(0, 0, 0, 0.95) 0px 1px 2px', 'grad': 'linear-gradient(rgba(3, 14, 24, 0.06) 0%, rgba(3, 14, 24, 0.18) 38%, rgba(3, 14, 24, 0.92) 100%)'}
+PASS Compact panel fills dock width — {'aL': 10, 'aR': 404, 'nL': 10, 'nR': 404, 'pL': 11, 'pR': 403, 'shadow': 'rgba(0, 0, 0, 0.95) 0px 2px 8px, rgba(0, 0, 0, 0.95) 0px 1px 2px', 'grad': 'linear-gradient(rgba(3, 14, 24, 0.06) 0%, rgba(3, 14, 24, 0.18) 38%, rgba(3, 14, 24, 0.92) 100%)'}
+PASS Compact captions readable treatment — ('rgba(0, 0, 0, 0.95) 0px 2px 8px, rgba(0, 0, 0, 0.95) 0px 1px 2px', 'linear-gradient(rgba(3, 14, 24, 0.06) 0%, rgb')
+PASS Full day cards equal height — [722, 722, 722, 722, 722, 722, 722, 722]
+PASS Full day heroes equal height incl day4 — [260, 260, 260, 260, 260, 260, 260, 260]
+PASS Full day outer cards fixed — [{'h': 722, 'hero': 260, 'overflow': 'hidden'}, {'h': 722, 'hero': 260, 'overflow': 'hidden'}]
+PASS Route explicit prev/next — {'prev': True, 'next': True, 'editorDown': True, 'hb': 445, 'bt': 445}
+PASS Route swipe day gesture unbound
+PASS Route handle zone does not overlap body — {'prev': True, 'next': True, 'editorDown': True, 'hb': 445, 'bt': 445}
+PASS Next day button works — 1->2
+PASS Route handle tap toggles full — full
+PASS Short logo closes current view — {'hidden': True, 'sheet': 'closed', 'view': 'route', 'sonar': True}
+PASS Short logo pings without Sonar panel — {'hidden': True, 'sheet': 'closed', 'view': 'route', 'sonar': True}
+PASS Long logo opens Sonar view — {'sheet': 'two', 'view': 'sonar', 'ping': True, 'fav': True, 'close': True, 'tops': [498.78125, 498.78125, 498.78125, 498.78125]}
+PASS Sonar Ping/Favorites/Close
+PASS Sonar radii one row — [498.78125, 498.78125, 498.78125, 498.78125]
+PASS In-view Sonar ping keeps Sonar panel open
+PASS Notification cancelled swipe resets — {'cl': 'notif-swipe', 'tr': ''}
+PASS Route cards all have nonempty image + fallback — [('Suite Laguna Otel', 'data:image/jpeg;base64,/9j/4AA'), ('Migros', 'data:image/jpeg;base64,/9j/4AA')]
+PASS No JS runtime exceptions — 0
+RESULT 21/21 PASS

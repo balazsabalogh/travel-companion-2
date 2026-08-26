@@ -1,0 +1,1060 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body,#app{margin:0;width:100%;height:100%;height:100dvh;overflow:hidden}body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;background:#0f1419;color:var(--text);overscroll-behavior:none;user-select:none}:root{--safe-top:env(safe-area-inset-top);--safe-bottom:env(safe-area-inset-bottom);--panel:#151b22;--panel2:#1b232c;--panel3:#232d37;--line:rgba(255,255,255,.11);--text:#f5f7f8;--muted:#a8b0b7;--accent:#d63b43;--green:#39a36b;--blue:#3c88e8;--shadow:0 16px 38px rgba(0,0,0,.36);--nav-h:78px;--sheet-h:0px;--day:#d63b43}.theme-light{--panel:#eef1f3;--panel2:#e4e9ed;--panel3:#d9e0e5;--line:rgba(12,20,28,.12);--text:#171d23;--muted:#68737d;--shadow:0 16px 38px rgba(32,44,55,.16)}button{font:inherit;color:inherit}.hidden{display:none!important}#map{position:absolute;inset:0;z-index:1;background:#13202a}.offline-map{position:absolute;inset:0;z-index:0;background:#111820 url('./assets/offline-map.svg') center/cover no-repeat}.leaflet-container{background:#111820}.leaflet-control-attribution{font-size:8px!important;opacity:.55}.leaflet-control-zoom{display:none}.notification-zone{position:fixed;left:10px;right:10px;top:calc(var(--safe-top) + 8px);z-index:1800;pointer-events:none}.notif-strip{pointer-events:auto;width:100%;min-height:42px;border:1px solid var(--line);background:rgba(18,24,30,.93);backdrop-filter:blur(18px);border-radius:14px;display:flex;align-items:center;gap:10px;padding:8px 12px;box-shadow:var(--shadow);text-align:left}.theme-light .notif-strip{background:rgba(241,244,246,.94)}.notif-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:0 0 auto}.notif-copy{min-width:0;display:flex;align-items:baseline;gap:8px;flex:1}.notif-copy b{font-size:12px;white-space:nowrap}.notif-copy small{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.notif-strip .chev{color:var(--muted)}.notif-drawer{pointer-events:auto;position:absolute;left:0;right:0;top:-520px;max-height:58vh;background:rgba(16,22,28,.97);border:1px solid var(--line);border-radius:0 0 22px 22px;box-shadow:var(--shadow);padding:10px 10px 14px;transition:top .28s cubic-bezier(.2,.8,.2,1);overflow:hidden}.theme-light .notif-drawer{background:rgba(240,243,245,.98)}.notif-drawer.open{top:calc(-1 * (var(--safe-top) + 8px));padding-top:calc(var(--safe-top) + 16px)}.drawer-handle{width:40px;height:4px;border-radius:4px;background:rgba(255,255,255,.28);margin:0 auto 8px}.theme-light .drawer-handle{background:rgba(0,0,0,.2)}.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:4px 4px 10px}.drawer-head>div{display:flex;flex-direction:column}.drawer-head b{font-size:18px}.drawer-head small{color:var(--muted)}.iconbtn{width:36px;height:36px;border:0;border-radius:12px;background:rgba(255,255,255,.08)}.theme-light .iconbtn{background:rgba(0,0,0,.06)}.notif-list{display:grid;gap:8px;overflow:auto;max-height:47vh}.notif-card{position:relative;padding:12px 12px 12px 16px;border-radius:15px;background:var(--panel2);border:1px solid var(--line)}.notif-card:before{content:"";position:absolute;left:5px;top:11px;bottom:11px;width:3px;border-radius:3px;background:var(--ncolor,#d6a63b)}.notif-card b{display:block;font-size:13px}.notif-card p{margin:3px 0 0;font-size:12px;color:var(--muted);line-height:1.35}.notif-card small{font-size:10px;color:var(--muted)}.map-controls{position:fixed;right:14px;bottom:calc(var(--nav-h) + var(--safe-bottom) + 20px);z-index:650;display:grid;gap:10px;transition:bottom .24s}.map-btn{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(19,25,31,.9);backdrop-filter:blur(16px);box-shadow:0 8px 24px rgba(0,0,0,.3);font-size:22px}.theme-light .map-btn{background:rgba(244,246,247,.94)}.main-nav{position:fixed;left:10px;right:10px;bottom:calc(var(--safe-bottom) + 8px);height:68px;z-index:1100;background:transparent;border:0;display:grid;grid-template-columns:1fr 1fr 78px 1fr 1fr;align-items:center;padding:5px 6px}.main-nav:before,.main-nav:after{content:"";position:absolute;top:0;bottom:0;width:calc(50% - 39px);background:rgba(16,22,28,.94);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(20px);z-index:-1}.main-nav:before{left:0;border-radius:20px 12px 12px 20px}.main-nav:after{right:0;border-radius:12px 20px 20px 12px}.theme-light .main-nav:before,.theme-light .main-nav:after{background:rgba(238,242,244,.95)}.main-tab{height:58px;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--muted)}.main-tab .ico{font-size:22px;line-height:1}.main-tab b{font-size:10px;font-weight:600}.main-tab.active{color:var(--text)}.logo-gap{height:100%}.companion-logo{position:fixed;z-index:1250;bottom:calc(var(--safe-bottom) + 24px);left:50%;transform:translateX(-50%);width:76px;height:76px;border:0;background:transparent;padding:0;filter:drop-shadow(0 9px 14px rgba(0,0,0,.35));transition:opacity .16s,transform .18s}.companion-logo img{width:100%;height:100%;object-fit:contain}.companion-logo.hide{opacity:0;pointer-events:none;transform:translateX(-50%) scale(.82)}.logo-badge{position:absolute;right:0;top:0;min-width:19px;height:19px;border-radius:10px;background:var(--accent);color:white;font-size:10px;font-weight:800;display:grid;place-items:center;padding:0 4px;box-shadow:0 3px 8px rgba(0,0,0,.35)}.sheet{position:fixed;left:0;right:0;bottom:0;z-index:1000;height:var(--sheet-h);background:rgba(18,24,30,.97);border-top:1px solid var(--line);border-radius:24px 24px 0 0;box-shadow:0 -16px 36px rgba(0,0,0,.34);backdrop-filter:blur(20px);overflow:hidden;transition:height .27s cubic-bezier(.2,.8,.2,1);pointer-events:none}.theme-light .sheet{background:rgba(239,242,244,.98)}.sheet.open{pointer-events:auto}.sheet.dragging{transition:none}.sheet-drag{position:absolute;z-index:30;top:0;left:0;right:0;height:36px;touch-action:none}.sheet-drag span{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:42px;height:4px;border-radius:4px;background:rgba(255,255,255,.3)}.theme-light .sheet-drag span{background:rgba(0,0,0,.2)}.sheet-body{position:absolute;left:0;right:0;top:26px;bottom:74px;overflow:auto;padding:0 14px 18px;-webkit-overflow-scrolling:touch}.sheet.state-mini .sheet-body{bottom:72px}.expanded-nav{position:absolute;left:0;right:0;bottom:0;height:70px;padding:4px 8px calc(var(--safe-bottom) + 4px);display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);background:rgba(15,20,25,.98)}.theme-light .expanded-nav{background:rgba(237,241,243,.98)}.exp-tab{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;font-size:17px}.exp-tab small{font-size:8px}.exp-tab.active{color:var(--text)}.exp-tab.settings{color:#6ba7f4}.sheet-card{background:var(--panel2);border:1px solid var(--line);border-radius:17px;padding:12px}.mini-card{display:grid;grid-template-columns:60px 1fr auto;align-items:center;gap:10px}.mini-card img{width:60px;height:60px;border-radius:13px;object-fit:cover}.mini-card .title{font-size:15px;font-weight:750}.mini-card .sub{font-size:11px;color:var(--muted);margin-top:3px}.mini-card .expand{width:34px;height:34px;border-radius:12px;border:1px solid var(--line);background:var(--panel3)}.actions{display:grid;grid-template-columns:1.4fr 1fr 1fr .6fr;gap:7px;margin-top:10px}.action{min-height:42px;border-radius:12px;border:1px solid var(--line);background:var(--panel3);font-size:11px;font-weight:650;padding:6px}.action.primary{background:#286fd1;color:#fff;border-color:#2d7ee8}.action.green{background:#267a51;color:#fff;border-color:#2f9e68}.section-title{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 2px 8px}.filters{display:flex;gap:9px;overflow:auto;padding-bottom:4px}.filter{flex:0 0 auto;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;color:var(--muted);font-size:9px;gap:4px}.filter i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--panel3);border:1px solid var(--line);font-style:normal;font-size:16px}.filter.active{color:var(--text)}.filter.active i{outline:2px solid var(--day)}.poi-detail-hero{width:100%;height:150px;border-radius:17px;object-fit:cover}.poi-detail-head{display:flex;gap:10px;margin-top:11px}.poi-detail-head h2{font-size:20px;margin:0}.poi-detail-head p{margin:4px 0;font-size:12px;color:var(--muted)}.tag{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;border:1px solid var(--line);background:var(--panel3);font-size:10px}.tag.good{color:#78d69e}.guide-block{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}.guide-block h3{font-size:13px;margin:0 0 5px}.guide-block p{font-size:12px;line-height:1.45;color:var(--muted);margin:0}.route-context{display:grid;gap:7px}.route-row{display:grid;grid-template-columns:24px 48px 1fr 20px;align-items:center;gap:8px;padding:8px;border:1px solid var(--line);border-radius:13px;background:var(--panel2)}.route-row.selected{border-color:#468be5;background:rgba(70,139,229,.1)}.route-row.done{opacity:.62}.route-row img{width:48px;height:42px;border-radius:9px;object-fit:cover}.route-num{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--panel3);font-size:10px}.route-row b{font-size:12px}.route-row small{display:block;color:var(--muted);font-size:9px;margin-top:2px}.drag{color:var(--muted);font-size:15px}.full-planner{display:grid;gap:7px}.planner-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 4px}.planner-head h2{margin:0;font-size:19px}.planner-head small{color:var(--muted)}.planner-card{position:relative;display:grid;grid-template-columns:22px 54px 1fr 26px;align-items:center;gap:8px;padding:8px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);touch-action:pan-y}.planner-card.active{border-color:#4e8de0}.planner-card.done{opacity:.6}.planner-card img{width:54px;height:48px;border-radius:9px;object-fit:cover}.planner-card b{font-size:12px}.planner-card small{display:block;color:var(--muted);font-size:9px;margin-top:2px}.transfer{font-size:9px;color:var(--muted);padding:0 0 0 38px}.add-stop{width:100%;height:44px;border-radius:13px;border:1px solid var(--line);background:#246fd2;color:white;font-weight:700}.main-nav.hide{display:none}.full-overlay{position:fixed;inset:0;z-index:2100;background:var(--panel);display:flex;flex-direction:column;padding-top:var(--safe-top);animation:overlayIn .18s ease}@keyframes overlayIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.overlay-head{height:58px;display:grid;grid-template-columns:42px 1fr 42px;align-items:center;padding:6px 10px;border-bottom:1px solid var(--line)}.overlay-head>div{min-width:0}.overlay-head b{display:block;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.overlay-head small{color:var(--muted)}.overlay-body{flex:1;overflow:auto;padding:14px;-webkit-overflow-scrolling:touch}.day-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:10px}.day-card{min-width:calc(100vw - 28px);scroll-snap-align:center;background:var(--panel2);border:1px solid var(--line);border-radius:22px;overflow:hidden}.day-card .hero{height:210px;background:#222;position:relative}.day-card .hero img{width:100%;height:100%;object-fit:cover}.day-card .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.75))}.day-card .hero-copy{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;color:white}.day-card .hero-copy b{font-size:24px}.day-card .hero-copy small{display:block;margin-top:3px;opacity:.8}.day-card .day-content{padding:14px}.day-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.day-route-mini{display:grid;gap:8px}.day-route-mini .row{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:8px}.day-route-mini .row b{font-size:12px}.day-route-mini .row small{color:var(--muted)}.day-choose{margin-top:14px;width:100%;height:44px;border-radius:13px;border:0;background:var(--day);color:white;font-weight:750}.settings-section{margin-bottom:20px}.settings-section h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.setting-card{background:var(--panel2);border:1px solid var(--line);border-radius:17px;padding:13px;margin-bottom:8px}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0}.setting-row b{font-size:13px}.setting-row small{display:block;color:var(--muted);margin-top:2px}.toggle{width:44px;height:26px;border-radius:13px;background:#48515b;position:relative}.toggle:after{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:white;top:2px;left:2px;transition:left .15s}.toggle.on{background:#2d8c5e}.toggle.on:after{left:20px}.pace{width:100%;accent-color:var(--accent)}.choice-row{display:flex;gap:7px;flex-wrap:wrap}.choice{border:1px solid var(--line);background:var(--panel3);border-radius:11px;padding:8px 10px;font-size:11px}.choice.active{outline:2px solid var(--accent)}.favorites{display:grid;gap:8px}.fav-card{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;padding:9px;border-radius:14px;border:1px solid var(--line);background:var(--panel2)}.fav-card img{width:64px;height:56px;border-radius:10px;object-fit:cover}.fav-card b{font-size:13px}.fav-card small{display:block;color:var(--muted);margin-top:3px}.guide-page .guide-hero{height:230px;border-radius:20px;overflow:hidden}.guide-page .guide-hero img{width:100%;height:100%;object-fit:cover}.guide-page h1{font-size:25px;margin:14px 0 4px}.accordion{border-top:1px solid var(--line)}.accordion button{width:100%;border:0;background:transparent;display:flex;justify-content:space-between;padding:14px 2px;font-weight:700}.accordion .acc-body{display:none;padding:0 2px 14px;color:var(--muted);font-size:13px;line-height:1.5}.accordion.open .acc-body{display:block}.toast{position:fixed;z-index:3000;left:50%;bottom:calc(var(--safe-bottom) + 95px);transform:translate(-50%,20px);background:rgba(20,27,33,.96);border:1px solid var(--line);border-radius:13px;padding:10px 14px;font-size:12px;opacity:0;pointer-events:none;transition:.18s}.toast.show{opacity:1;transform:translate(-50%,0)}.hold-menu{position:fixed;z-index:2500;left:50%;bottom:calc(var(--safe-bottom) + 90px);transform:translateX(-50%);display:flex;gap:7px;background:rgba(15,21,27,.96);padding:8px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.hold-menu button{border:1px solid var(--line);background:var(--panel2);padding:9px;border-radius:11px;font-size:10px}.sonar-pulse{position:fixed;z-index:500;left:50%;top:50%;width:40px;height:40px;transform:translate(-50%,-50%);pointer-events:none;display:none}.sonar-pulse.on{display:block}.sonar-pulse i{position:absolute;inset:0;border:2px solid #3c8df0;border-radius:50%;animation:pulse 1.4s ease-out infinite}.sonar-pulse i:nth-child(2){animation-delay:.35s}.sonar-pulse i:nth-child(3){animation-delay:.7s}@keyframes pulse{0%{transform:scale(.3);opacity:.9}100%{transform:scale(7);opacity:0}}.tc-marker{position:relative;width:52px;height:66px}.tc-marker .body{position:absolute;left:6px;top:10px;width:40px;height:40px;border-radius:50%;background:rgba(20,26,31,.94);border:3px solid var(--mday);box-shadow:0 7px 15px rgba(0,0,0,.3)}.tc-marker .num{position:absolute;inset:0;display:grid;place-items:center;font-size:17px;font-weight:850;color:white}.tc-marker .cat{position:absolute;left:50%;top:-2px;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--cat);border:2px solid #f6f6f6;color:#111;font-size:11px;font-weight:800}.tc-marker .tip{position:absolute;left:50%;top:47px;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:13px solid var(--mday)}.tc-marker.next .body{animation:halo 1.5s infinite}@keyframes halo{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--mday) 35%,transparent),0 7px 15px rgba(0,0,0,.3)}50%{box-shadow:0 0 0 12px color-mix(in srgb,var(--mday) 0%,transparent),0 7px 15px rgba(0,0,0,.3)}}.sonar-marker{width:34px;height:42px;position:relative}.sonar-marker i{position:absolute;width:32px;height:32px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:var(--cat);border:2px solid rgba(255,255,255,.8);box-shadow:0 6px 12px rgba(0,0,0,.28)}.sonar-marker b{position:absolute;width:32px;height:32px;display:grid;place-items:center;color:#111;font-size:12px;z-index:2}.leaflet-marker-icon{background:transparent!important;border:0!important}.nav-banner{position:fixed;left:10px;right:10px;top:calc(var(--safe-top) + 58px);z-index:900;background:rgba(16,22,28,.95);border:1px solid var(--line);border-radius:16px;padding:10px 12px;display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;box-shadow:var(--shadow)}.nav-arrow{font-size:30px}.nav-banner b{font-size:16px}.nav-banner small{display:block;color:var(--muted)}.nav-banner button{border:0;border-radius:11px;background:var(--panel3);width:36px;height:36px}.swipe-reveal{position:absolute;inset:0;border-radius:14px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:linear-gradient(90deg,#9b2e35,#27313b 45%,#267a51);z-index:-1;color:white;font-size:11px;font-weight:700}
+@media(min-width:720px){.main-nav{left:50%;right:auto;width:430px;transform:translateX(-50%)}.sheet{left:50%;right:auto;width:430px;transform:translateX(-50%)}.full-overlay{left:50%;right:auto;width:430px;transform:translateX(-50%)}.notification-zone{left:50%;right:auto;width:430px;transform:translateX(-50%)}}
+
+/* 0.7.1 beta test fixes */
+html,body,#app,button,.main-nav,.main-tab,.hold-menu,.day-carousel,.day-card{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
+#map{inset:0!important}.offline-map{display:none!important}
+.leaflet-image-layer{display:none!important}
+.sheet.state-mini{border-radius:22px 22px 0 0}.sheet.state-mini .sheet-body{bottom:0;padding-bottom:12px}.sheet.state-mini .expanded-nav{display:none!important}
+.main-nav.hide{display:none!important}
+.companion-logo img{display:block;background:transparent!important}
+.photo-wrap{position:relative;overflow:hidden;background:var(--panel3)}.photo-wrap>img{width:100%;height:100%;object-fit:cover}.photo-badge{position:absolute;right:6px;bottom:6px;background:rgba(10,15,20,.72);color:#fff;border-radius:999px;padding:4px 7px;font-size:8px;backdrop-filter:blur(8px)}
+.photo-credit{font-size:9px;color:var(--muted);margin-top:5px}.photo-credit a{color:inherit}
+.day-route-mini .row>div{min-width:0}.day-route-mini .row b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.day-route-mini .row small{display:block;margin-top:2px}.day-route-mini .row>small{text-align:right;white-space:nowrap}
+.day-card{height:auto;align-self:flex-start}.day-card .day-content{min-height:0}.day-card .hero{height:min(32vh,230px)}
+.exp-tab span,.main-tab .ico{display:grid;place-items:center}.exp-tab svg,.main-tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.exp-tab small{font-size:9px}.exp-tab sup{position:absolute;transform:translate(8px,-5px);background:var(--accent);color:#fff;border-radius:9px;padding:1px 4px;font-size:8px}
+.sonar-status{position:fixed;left:50%;bottom:calc(var(--safe-bottom) + 102px);transform:translateX(-50%);z-index:980;background:rgba(15,21,27,.92);color:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:10px;opacity:0;pointer-events:none;transition:.18s}.sonar-status.show{opacity:1}
+.trip-test-badge{position:fixed;z-index:850;left:12px;top:calc(var(--safe-top) + 62px);padding:6px 9px;border-radius:999px;background:rgba(15,21,27,.78);border:1px solid var(--line);font-size:9px;color:#d5dde3;backdrop-filter:blur(10px);display:none}.trip-test-badge.show{display:block}
+.theme-light .trip-test-badge{background:rgba(244,246,247,.9);color:#4b5863}
+.mini-card{grid-template-columns:58px minmax(0,1fr) 34px;padding:10px}.mini-card .photo-wrap{width:58px;height:58px;border-radius:12px}.mini-card .title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mini-card .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.route-row .photo-wrap{width:48px;height:42px;border-radius:9px}.planner-card .photo-wrap{width:54px;height:48px;border-radius:9px}.fav-card .photo-wrap{width:64px;height:56px;border-radius:10px}.guide-hero.photo-wrap{height:230px;border-radius:20px}.poi-detail-photo{height:150px;border-radius:17px}
+.sheet.state-mini .sheet-drag{height:26px}.sheet.state-mini .sheet-drag span{top:6px}
+
+/* 0.7.2 compact dock + interaction pass */
+:root{--nav-h:54px}
+.theme-dark{--panel:#151b22;--panel2:#1b232c;--panel3:#232d37;--text:#f5f7f8;--muted:#aeb7bf}
+.theme-dark #map .leaflet-tile{filter:brightness(.76) saturate(.62) contrast(.93) sepia(.03)}
+.theme-light #map .leaflet-tile{filter:brightness(1.04) saturate(.72) contrast(.95)}
+.main-nav{left:20px;right:20px;height:54px;bottom:calc(var(--safe-bottom) + 8px);grid-template-columns:1fr 1fr 76px 1fr 1fr;padding:3px 7px;transition:bottom .24s ease,opacity .18s ease}
+.main-nav:before,.main-nav:after{width:calc(50% - 38px);border-radius:18px;background:rgba(16,22,28,.92)}
+.theme-light .main-nav:before,.theme-light .main-nav:after{background:rgba(238,242,244,.94)}
+.main-tab{height:48px;gap:0;position:relative}
+.main-tab .ico{font-size:23px}.main-tab b{display:none!important}
+.main-tab svg{width:24px!important;height:24px!important}
+.companion-logo{width:76px;height:76px;bottom:calc(var(--safe-bottom) - 3px);filter:drop-shadow(0 7px 12px rgba(0,0,0,.38))}
+.logo-badge{display:none!important}
+.main-notif-badge{position:absolute;left:50%;top:3px;transform:translateX(9px);min-width:18px;height:18px;border-radius:10px;background:var(--accent);color:#fff;font-size:9px;font-weight:800;display:grid;place-items:center;padding:0 4px;box-shadow:0 3px 8px rgba(0,0,0,.32)}
+.sheet.state-mini{height:126px}.sheet.state-mini .sheet-body{padding:0 12px 8px}.sheet.state-mini .mini-card{padding:8px}.sheet.state-mini .mini-card .photo-wrap{width:52px;height:52px}.sheet.state-mini .mini-card{grid-template-columns:52px minmax(0,1fr) 32px}.sheet.state-mini .mini-card .expand{width:32px;height:32px}
+.main-nav.above-mini{bottom:calc(var(--safe-bottom) + 134px)}
+.map-controls{transition:opacity .18s,bottom .24s}.map-controls.hidden-by-sheet{opacity:0;pointer-events:none}
+.filters{justify-content:space-between;gap:4px;width:100%;overflow:hidden}.filter{flex:1 1 0;min-width:0;font-size:8px;gap:7px}.filter i{width:36px;height:36px}.filter{transform:translateY(3px)}
+.tc-marker.selected{transform:scale(1.13);transform-origin:50% 70%;z-index:20}.tc-marker.selected .body{animation:selectedHalo 1.25s ease-in-out infinite}.tc-marker.next:not(.selected) .body{animation:halo 1.5s infinite}@keyframes selectedHalo{0%,100%{box-shadow:0 0 0 4px color-mix(in srgb,var(--mday) 24%,transparent),0 8px 18px rgba(0,0,0,.33)}50%{box-shadow:0 0 0 13px color-mix(in srgb,var(--mday) 2%,transparent),0 8px 18px rgba(0,0,0,.33)}}
+.sonar-marker.selected{transform:scale(1.18);filter:drop-shadow(0 0 8px rgba(75,156,255,.72))}
+.nav-banner{grid-template-columns:44px 1fr!important}.nav-banner button{display:none!important}
+.exp-tab small{display:none!important}.expanded-nav{height:58px;padding:4px 8px calc(var(--safe-bottom) + 3px)}.exp-tab{font-size:19px}.exp-tab svg{width:23px;height:23px}
+.route-row{min-height:68px;grid-template-columns:28px 64px 1fr 24px;padding:9px}.route-row .photo-wrap{width:64px;height:56px}.route-row b{font-size:13px}.route-row small{font-size:10px}.planner-card{min-height:72px;grid-template-columns:24px 66px 1fr 28px;padding:9px}.planner-card .photo-wrap{width:66px;height:58px}.planner-card b{font-size:13px}.planner-card small{font-size:10px}
+.full-overlay.days-mode{z-index:900;background:transparent;padding-top:calc(var(--safe-top) + 74px);padding-bottom:calc(var(--safe-bottom) + 72px);pointer-events:none}.full-overlay.days-mode .overlay-head{display:none}.full-overlay.days-mode .overlay-body{padding:0;overflow:hidden;pointer-events:auto;display:flex;flex-direction:column;justify-content:flex-end}.days-mode .day-carousel{padding:8px 8vw 4px;gap:10px;overflow-x:auto}.days-mode .day-card{min-width:84vw;max-height:72vh;overflow:auto;background:rgba(18,24,30,.94);backdrop-filter:blur(18px);box-shadow:0 16px 40px rgba(0,0,0,.34)}.theme-light .days-mode .day-card{background:rgba(239,242,244,.95)}.days-mode .day-card .hero{height:min(25vh,190px)}.days-mode .day-indicator{height:24px;display:flex;align-items:center;justify-content:center;gap:5px;pointer-events:auto}.days-mode .day-indicator i{width:6px;height:6px;border-radius:50%;background:rgba(170,180,190,.45);transition:.15s}.days-mode .day-indicator i.active{width:16px;border-radius:5px;background:var(--accent)}
+.photo-wrap img{transition:opacity .2s}.photo-wrap.loading:after{content:'Kép betöltése…';position:absolute;inset:0;display:grid;place-items:center;font-size:9px;color:var(--muted);background:linear-gradient(135deg,var(--panel3),var(--panel2))}.photo-wrap>img{position:relative;z-index:1}
+.notif-card{touch-action:pan-y;transition:transform .18s,opacity .18s}.notif-card.swiping{transition:none}.notif-card .swipe-hint{position:absolute;inset:0;z-index:-1;display:flex;align-items:center;justify-content:space-between;padding:0 15px;font-size:11px;font-weight:700;color:white;border-radius:15px;background:linear-gradient(90deg,#b7343d,#27313b 44%,#2b875c)}
+@media(min-width:720px){.main-nav{width:390px}.days-mode .day-card{min-width:350px}.days-mode .day-carousel{padding-left:40px;padding-right:40px}}
+
+
+/* 0.7.3 — unified instrument dock + panel navigation */
+:root{--compact-nav-h:52px;--compact-nav-w:min(390px,calc(100vw - 20px))}
+.main-nav{
+  left:50%;right:auto;width:var(--compact-nav-w);height:var(--compact-nav-h);
+  bottom:calc(var(--safe-bottom) + 10px);transform:translateX(-50%);
+  grid-template-columns:1fr 1fr 82px 1fr 1fr;padding:0 7px;
+  background:rgba(16,22,28,.94);border:1px solid var(--line);border-radius:22px;
+  box-shadow:var(--shadow);backdrop-filter:blur(20px);overflow:visible;
+}
+.main-nav:before,.main-nav:after{display:none!important}
+.theme-light .main-nav{background:rgba(238,242,244,.95)}
+.main-tab{height:48px;gap:0}
+.main-tab b{display:none!important}
+.main-tab .ico{font-size:21px}
+.logo-gap{height:100%}
+.companion-logo{
+  width:76px;height:76px;bottom:max(4px,calc(var(--safe-bottom) - 3px));
+  filter:drop-shadow(0 8px 14px rgba(0,0,0,.38));
+}
+/* subtle cradle around the emblem while staying one continuous dock */
+.main-nav .logo-gap:before{
+  content:"";position:absolute;left:50%;top:50%;width:82px;height:82px;
+  transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+  border:1px solid rgba(255,255,255,.11);box-shadow:inset 0 0 0 5px rgba(255,255,255,.018);
+}
+.theme-light .main-nav .logo-gap:before{border-color:rgba(15,22,29,.10)}
+.main-nav.above-mini{bottom:calc(var(--safe-bottom) + 10px)}
+
+/* any non-navigation panel uses the six-button panel bar immediately */
+.sheet.state-mini .expanded-nav{display:grid}
+.sheet.state-mini .sheet-body{bottom:61px}
+.expanded-nav{height:58px}
+
+/* Day carousel: floating over map, no header, standard small handle only. */
+.days-mode .day-carousel-wrap{position:relative;display:flex;flex-direction:column;min-height:0}
+.days-handle{width:42px;height:4px;border-radius:4px;background:rgba(255,255,255,.34);margin:2px auto 5px;flex:0 0 auto}
+.theme-light .days-handle{background:rgba(0,0,0,.22)}
+.days-mode .day-card{min-width:82vw;max-height:68vh}
+.days-mode .day-carousel{padding:4px 9vw 2px;gap:10px}
+.days-mode .day-card .hero{height:min(27vh,205px)}
+.days-mode .day-indicator{height:22px}
+
+/* same six-button control bar under full day carousel */
+.overlay-nav{
+  position:fixed;z-index:2250;left:0;right:0;bottom:0;height:58px;
+  padding:3px 8px calc(var(--safe-bottom) + 3px);display:grid;
+  grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);
+  background:rgba(15,20,25,.98);backdrop-filter:blur(18px)
+}
+.theme-light .overlay-nav{background:rgba(237,241,243,.98)}
+.overlay-nav .exp-tab{font-size:19px}
+.overlay-nav .exp-tab small{display:none!important}
+.overlay-nav .exp-tab svg{width:23px;height:23px}
+.full-overlay.days-mode{padding-bottom:calc(var(--safe-bottom) + 58px)}
+
+@media(min-width:720px){
+ .main-nav{width:390px}
+ .days-mode .day-card{min-width:350px}
+}
+
+/* 0.7.4 — Blue country skin + refined interactions */
+:root{
+  --panel:#0b2034;--panel2:#102a43;--panel3:#173853;
+  --line:rgba(184,211,232,.15);--text:#f5f8fb;--muted:#9fb2c4;
+  --accent:#d93643;--green:#2f9064;--blue:#3f88e8;
+  --shadow:0 16px 38px rgba(2,12,22,.34);--nav-h:56px;
+}
+body.theme-dark{background:#071827;color:var(--text)}
+.theme-dark{--panel:#0b2034;--panel2:#102a43;--panel3:#173853;--text:#f5f8fb;--muted:#9fb2c4;--line:rgba(184,211,232,.15)}
+.theme-dark #map .leaflet-tile{filter:brightness(.94) saturate(.78) contrast(.91) sepia(.04)!important}
+#map,.leaflet-container{background:#d9e2e5}
+.offline-map{background-color:#d8e2e7}
+
+/* unified instrument dock — no white/animated halo */
+.main-nav{
+  width:min(398px,calc(100vw - 20px));height:54px;
+  background:rgba(8,28,46,.93)!important;border-color:rgba(180,211,235,.16);
+  border-radius:22px;grid-template-columns:1fr 1fr 88px 1fr 1fr;
+  box-shadow:0 12px 28px rgba(4,17,29,.30);backdrop-filter:blur(20px);
+}
+.main-nav .logo-gap:before{display:none!important}
+.main-tab{color:#aabac8}.main-tab.active{color:#fff}.main-tab svg{width:25px!important;height:25px!important}
+.companion-logo{width:86px;height:86px;bottom:max(0px,calc(var(--safe-bottom) - 6px));filter:drop-shadow(0 8px 13px rgba(2,12,22,.42))!important}
+.companion-logo img{background:transparent!important;filter:none!important}
+
+/* panels: navy rather than black, image-led */
+.sheet{background:rgba(9,31,50,.975)!important;border-top-color:rgba(184,211,232,.15)}
+.sheet-card,.route-row,.planner-card,.setting-card,.fav-card{background:var(--panel2)}
+.sheet.state-mini{height:158px!important;border-radius:22px 22px 0 0}
+.sheet.state-mini .sheet-body{top:24px;bottom:59px!important;padding:0 12px 7px}
+.sheet.state-mini .expanded-nav{display:grid!important;height:59px}
+.expanded-nav,.overlay-nav{background:rgba(7,25,41,.985)!important;border-color:rgba(184,211,232,.13)}
+.exp-tab{color:#a8bac9}.exp-tab.settings{color:#8ab9ef}.exp-tab svg{width:24px;height:24px}
+.mini-card{min-height:68px;padding:7px 9px!important;grid-template-columns:56px minmax(0,1fr) 32px!important}
+.sheet.state-mini .mini-card .photo-wrap{width:56px!important;height:56px!important}.mini-card .title{font-size:15px}.mini-card .sub{font-size:10px}
+.poi-detail-hero{height:205px!important;border-radius:18px}.poi-detail-head h2{font-size:22px}
+.guide-page .guide-hero,.guide-hero.photo-wrap{height:260px!important}
+
+/* markers are subtly alive; selected is bigger + pulsing */
+.tc-marker{translate:0 0;animation:markerFloat 3.4s ease-in-out infinite;will-change:translate}
+@keyframes markerFloat{0%,100%{translate:0 0}50%{translate:0 -2.5px}}
+.tc-marker.selected{transform:scale(1.12)!important;transform-origin:50% 70%;z-index:30}
+.tc-marker.selected .body{animation:selectedHalo074 1.55s ease-in-out infinite!important}
+@keyframes selectedHalo074{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--mday) 22%,transparent),0 8px 18px rgba(0,0,0,.28)}50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--mday) 3%,transparent),0 8px 18px rgba(0,0,0,.28)}}
+.sonar-marker{animation:markerFloat 3.2s ease-in-out infinite}
+
+/* navigation: clean map + upper information only */
+.nav-banner{top:calc(var(--safe-top) + 58px);left:14px;right:14px;grid-template-columns:42px 1fr!important;background:rgba(8,28,46,.95)!important;border-color:rgba(184,211,232,.16);padding:10px 12px;border-radius:16px}
+.nav-banner .nav-arrow{font-size:31px}.nav-banner b{font-size:16px}.nav-banner small{font-size:11px}.nav-legs{display:block;color:#bfd0df;font-size:10px;margin-top:5px}
+
+/* wide long-press action palette */
+.hold-menu.wide{left:10px;right:10px;bottom:calc(var(--safe-bottom) + 72px);transform:none;width:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px;background:rgba(8,28,46,.97);border-radius:20px}
+.hold-menu.wide button{min-height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:#112f49;border-color:rgba(184,211,232,.14)}
+.hold-menu.wide button span{font-size:22px}.hold-menu.wide button b{font-size:10px}
+
+/* Sonar: no duplicate black status bubble. Results are real swipe cards. */
+.sonar-status{display:none!important}
+.sonar-results{display:grid;gap:8px;margin-top:12px;padding-bottom:8px}.sonar-result{position:relative;overflow:hidden;border-radius:15px;background:#0b2034;border:1px solid var(--line)}
+.sonar-result-card{position:relative;z-index:2;display:grid;grid-template-columns:64px 1fr 18px;gap:10px;align-items:center;padding:9px;background:var(--panel2);transition:transform .18s;touch-action:pan-y}
+.sonar-result-card .photo-wrap{width:64px;height:58px;border-radius:11px}.sonar-result-card b{display:block;font-size:13px}.sonar-result-card small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.sonar-result-card span{display:block;color:#bed0dd;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}.sonar-result-card>i{font-style:normal;color:var(--muted);font-size:18px}
+.sonar-action{position:absolute;top:0;bottom:0;display:flex;align-items:center;font-size:10px;font-weight:750;color:white;padding:0 12px;opacity:.25;transition:opacity .12s}.sonar-action.left{left:0;background:#334b64}.sonar-action.right{right:0;background:#24724e}.sonar-result.to-left .sonar-action.left,.sonar-result.to-right .sonar-action.right{opacity:1}
+.sonar-radius{margin-bottom:6px}.sonar-filters{margin-bottom:4px}
+
+/* Messenger-style swipe reveal: one card moves, action lives behind it */
+.planner-card .swipe-reveal,.notif-card .swipe-hint{background:#0b2034!important;color:#fff!important;padding:0 10px!important}
+.planner-card .swipe-reveal span,.notif-card .swipe-hint span{padding:7px 10px;border-radius:999px;font-size:10px}
+.planner-card .swipe-reveal span:first-child,.notif-card .swipe-hint span:first-child{background:#81323a}
+.planner-card .swipe-reveal span:last-child,.notif-card .swipe-hint span:last-child{background:#276d50}
+.notif-drawer,.notif-strip{background:rgba(8,28,46,.95)!important}.notif-card{background:#102a43}
+
+/* Full photo day carousel */
+.full-overlay.days-mode{padding-top:calc(var(--safe-top) + 58px);background:transparent}.days-mode .day-card{background:rgba(9,31,50,.97)!important;border:1px solid rgba(184,211,232,.16);min-width:82vw;max-height:72vh;border-radius:22px;overflow:auto}.days-mode .day-card .hero{height:min(31vh,245px)!important}.days-mode .day-card .hero .photo-wrap,.days-mode .day-card .hero img{border-radius:0!important;width:100%;height:100%;object-fit:cover}.days-mode .day-carousel{padding:3px 9vw 2px;gap:12px;scroll-snap-type:x mandatory}.days-mode .day-card{scroll-snap-align:center}.days-handle{background:rgba(206,220,230,.45)!important}.days-mode .day-indicator i.active{background:#d93643}
+
+/* compact day picker = short tap */
+.full-overlay.days-compact{z-index:930;background:transparent;padding:0;pointer-events:none}.full-overlay.days-compact .overlay-head{display:none}.full-overlay.days-compact .overlay-body{position:absolute;left:0;right:0;bottom:calc(var(--safe-bottom) + 76px);padding:0;pointer-events:auto;overflow:visible}.days-compact-wrap{display:flex;flex-direction:column;gap:7px}.days-compact-track{display:flex;gap:8px;overflow-x:auto;padding:0 14vw;scroll-snap-type:x mandatory;scrollbar-width:none}.days-compact-track::-webkit-scrollbar{display:none}.day-compact-card{position:relative;flex:0 0 68vw;height:132px;border:1px solid rgba(184,211,232,.16);border-radius:19px;overflow:hidden;background:#0b2034;color:white;padding:0;scroll-snap-align:center;box-shadow:var(--shadow)}.day-compact-card .photo-wrap,.day-compact-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.day-compact-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(4,17,28,.86) 100%)}.day-compact-card>span{position:absolute;z-index:3;left:14px;right:12px;bottom:12px;text-align:left}.day-compact-card b{display:block;font-size:18px}.day-compact-card small{font-size:11px;color:#d9e5ed}.day-compact-card.active{outline:2px solid #d93643;outline-offset:-2px}.days-compact-wrap .day-indicator{display:flex;justify-content:center;gap:5px}.days-compact-wrap .day-indicator i{width:6px;height:6px;border-radius:50%;background:rgba(180,200,214,.45)}.days-compact-wrap .day-indicator i.active{width:16px;border-radius:5px;background:#d93643}
+
+/* richer photos and graceful fallback */
+.photo-wrap{background:linear-gradient(135deg,#173853,#0e2941);overflow:hidden}.photo-wrap img{object-fit:cover}.photo-badge{background:rgba(8,28,46,.78)!important}
+
+@media(min-width:720px){.day-compact-card{flex-basis:310px}.days-compact-track{padding-left:calc((100vw - 310px)/2);padding-right:calc((100vw - 310px)/2)}}
+
+/* 0.7.5 — field-test refinements */
+:root{--nav-h:56px}
+
+/* In-app logo: only the emblem, never an extra halo/background */
+.companion-logo,.companion-logo:before,.companion-logo:after{background:transparent!important;border:0!important;box-shadow:none!important}
+.companion-logo{filter:drop-shadow(0 7px 12px rgba(2,12,22,.34))!important}
+.companion-logo img{background:transparent!important}
+
+/* Only the selected route marker is alive. Others stay fixed. */
+.tc-marker,.sonar-marker{animation:none!important;translate:0 0!important}
+.tc-marker .body{background:linear-gradient(145deg,#17344b,#0d2437)!important;border-color:var(--mday)!important}
+.tc-marker.selected{transform:scale(1.09)!important;animation:selectedFloat075 3.2s ease-in-out infinite!important;z-index:40}
+.tc-marker.selected .body{background:linear-gradient(145deg,#214b68,#123048)!important;animation:selectedHalo075 1.8s ease-in-out infinite!important}
+@keyframes selectedFloat075{0%,100%{translate:0 0}50%{translate:0 -2.5px}}
+@keyframes selectedHalo075{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--mday) 22%,transparent),0 8px 18px rgba(0,0,0,.25)}50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--mday) 5%,transparent),0 9px 20px rgba(0,0,0,.28)}}
+
+/* Sheet layout: almost no gap between content and the 6-button rail */
+.sheet-body{bottom:calc(58px + var(--safe-bottom));padding-bottom:8px}
+.expanded-nav{height:calc(57px + var(--safe-bottom));padding:2px 8px calc(var(--safe-bottom) + 2px)}
+.sheet.state-mini{height:158px!important}
+.sheet.state-mini .sheet-body{bottom:calc(58px + var(--safe-bottom))!important;padding-bottom:1px!important}
+.sheet.state-fullscreen,.sheet.fullscreen{border-radius:0!important;border-top:0!important;top:0!important;height:100dvh!important}
+.sheet.fullscreen .sheet-drag{top:var(--safe-top);height:30px}
+.sheet.fullscreen .sheet-body{top:calc(var(--safe-top) + 28px);bottom:calc(57px + var(--safe-bottom));padding-top:0}
+
+/* Larger invisible touch target around the handle */
+.sheet-drag{height:48px!important;touch-action:none}
+.sheet-drag span{top:9px}
+
+/* POI actions: horizontal carousel with a visible next-item peek */
+.actions.action-carousel{display:flex!important;grid-template-columns:none!important;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;padding:0 14% 5px 0;margin-top:9px;scrollbar-width:none}
+.actions.action-carousel::-webkit-scrollbar{display:none}
+.action-carousel .action{flex:0 0 31%;min-width:104px;scroll-snap-align:start;white-space:nowrap;min-height:46px}
+.action-carousel .action.guide{background:#18436a;border-color:#2e6792;color:#f5f9fc}
+.action-carousel .action.danger{background:#45242a;border-color:#74404a;color:#f0c8cc}
+.action-carousel .action.subtle{opacity:.86;transform:scale(.96)}
+.action-carousel:after{content:"›";flex:0 0 18px;display:grid;place-items:center;color:#7f9bb0;font-size:24px}
+.detail-expand{flex:0 0 38px;margin-left:auto}
+
+/* Filters must fit and actually read as controls */
+.filters{padding:0 4px 12px;gap:13px;overflow-x:auto;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter{min-width:50px;font-size:10px!important;line-height:1.15;color:#9db2c2}
+.filter i{width:40px;height:40px;background:#173853}
+.filter span{display:block;white-space:nowrap}
+.filter.active{color:#fff}
+.filter.active i{outline:2px solid var(--day);background:#204a69}
+.sheet.state-one{min-height:43vh}
+
+/* Route has only large + fullscreen modes */
+.sheet.state-two .route-large .route-row{min-height:78px;padding:10px}
+.route-large .route-row img{width:62px;height:58px}
+.route-large .route-row{grid-template-columns:26px 62px 1fr 20px}
+.fullscreen-head{position:sticky;top:0;z-index:8;background:rgba(11,32,52,.98);padding:2px 0 9px}
+.head-actions{display:flex;gap:5px;align-items:center}
+.close-full{font-size:18px!important;min-width:36px}
+
+/* 2x2 quick itinerary palette; stays open until choice or outside tap */
+.hold-menu.quick{left:18px;right:18px;bottom:calc(var(--safe-bottom) + 72px);transform:none;width:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:10px;background:rgba(8,28,46,.97);border-radius:20px}
+.hold-menu.quick button{min-height:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#112f49;border-color:rgba(184,211,232,.14)}
+.hold-menu.quick button span{font-size:24px}.hold-menu.quick button b{font-size:11px}
+.hold-menu.wide{grid-template-columns:repeat(3,1fr)!important}
+
+/* Navigation banner: single top card, messenger-like swipe reveal */
+.nav-banner{overflow:hidden;padding:0!important;display:block!important;top:calc(var(--safe-top) + 58px)!important}
+.nav-banner.top-slot{top:calc(var(--safe-top) + 8px)!important}
+.nav-banner-card{position:relative;z-index:2;display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;background:rgba(8,28,46,.97);padding:10px 12px;transition:transform .16s;touch-action:pan-y}
+.nav-swipe-action{position:absolute;top:0;bottom:0;display:flex;align-items:center;padding:0 16px;color:white;font-size:11px;font-weight:800;opacity:.3;transition:opacity .12s}
+.nav-swipe-action.nav-dismiss{left:0;background:#8a3039}.nav-swipe-action.nav-next{right:0;background:#2c7b56}
+.nav-banner.swipe-left .nav-dismiss,.nav-banner.swipe-right .nav-next{opacity:1}
+
+/* Notifications: card follows finger, action appears behind it */
+.notif-swipe{position:relative;overflow:hidden;border-radius:15px;background:#0b2034}
+.notif-swipe .notif-card{position:relative;z-index:2;transition:transform .15s;touch-action:pan-y}
+.notif-action{position:absolute;top:0;bottom:0;display:flex;align-items:center;padding:0 14px;color:#fff;font-size:11px;font-weight:800;opacity:.25;transition:opacity .12s}
+.notif-action.dismiss{left:0;background:#8a3039}.notif-action.context{right:0;background:#2c7b56}
+.notif-swipe.to-left .notif-action.dismiss,.notif-swipe.to-right .notif-action.context{opacity:1}
+
+/* Compact days carousel is a real panel, no accidental grey strip */
+.full-overlay.days-compact .overlay-body{bottom:calc(var(--safe-bottom) + 66px)!important}
+.days-compact-panel{margin:0 10px;background:rgba(9,31,50,.92);border:1px solid rgba(184,211,232,.16);border-radius:22px 22px 6px 6px;box-shadow:0 -10px 28px rgba(2,12,22,.20);padding:8px 0 7px;backdrop-filter:blur(16px)}
+.days-compact-handle{height:20px;display:grid;place-items:center;touch-action:none}
+.days-compact-handle span{width:46px;height:4px;border-radius:4px;background:rgba(200,216,228,.42)}
+.days-compact-track{padding:0 13vw!important}
+.day-compact-card{border-width:2px!important;height:148px!important}
+.days-compact-panel .day-indicator{display:flex;justify-content:center;gap:5px;padding-top:7px}
+.days-compact-panel .day-indicator i{width:6px;height:6px;border-radius:50%;background:rgba(180,200,214,.40)}
+.days-compact-panel .day-indicator i.active{width:17px;border-radius:5px;background:#d93643}
+
+/* Full days view remains image-led */
+.days-mode .day-card{border-width:2px!important}
+.days-mode .day-carousel{padding-bottom:5px}
+
+/* Guide = fullscreen magazine view */
+.guide-full{position:relative;padding-bottom:18px}
+.guide-close{position:fixed;right:14px;top:calc(var(--safe-top) + 8px);z-index:25;width:40px;height:40px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:rgba(8,28,46,.90);font-size:22px;color:white;box-shadow:var(--shadow)}
+.guide-full .guide-hero{height:34vh!important;min-height:235px;border-radius:0 0 20px 20px;margin:0 -14px;display:block;overflow:hidden}
+.guide-full .guide-hero img{width:100%;height:100%;object-fit:cover}
+.guide-title h1{font-size:28px;margin:16px 0 3px}.guide-title p{margin:0;color:var(--muted)}
+.guide-story{padding:8px 0}.guide-story h2{font-size:15px;margin:16px 0 6px}.guide-story p{font-size:13px;line-height:1.55;color:#c1d1dc;margin:0}
+.guide-gallery{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:100px 100px;gap:7px;margin:14px 0}.guide-gallery img{width:100%;height:100%;object-fit:cover;border-radius:13px}.guide-gallery img:first-child{grid-row:1/3}
+
+/* photo fallback never shows a broken-image glyph */
+.photo-wrap{position:relative;background:linear-gradient(145deg,#24516f,#102c44)}
+.photo-wrap img{display:block}
+
+/* tiny gap between POI card content and bottom menu */
+.sheet.state-mini .mini-card{margin-bottom:1px}
+
+@media(min-width:720px){.action-carousel .action{flex-basis:150px}.days-compact-track{padding-left:calc((100vw - 340px)/2)!important;padding-right:calc((100vw - 340px)/2)!important}.day-compact-card{flex-basis:340px!important}}
+.guide-full .guide-hero>.photo-wrap{display:block;width:100%;height:100%;border-radius:0}.guide-full .guide-hero>.photo-wrap img{width:100%;height:100%;object-fit:cover}
+.sonar-marker.selected{transform:scale(1.08);animation:selectedFloat075 3.2s ease-in-out infinite!important;transform-origin:50% 70%}
+.sheet-close-all{position:absolute;right:12px;top:calc(var(--safe-top) + 8px);z-index:60;width:40px;height:40px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:rgba(8,28,46,.90);font-size:22px;color:#fff;box-shadow:var(--shadow)}
+
+/* 0.7.6 — polish + Antalya content pass */
+
+/* Notifications no longer look draggable: close with the arrow only. */
+.drawer-handle{display:none!important}
+
+/* Active navigation item: subtle but instantly legible. Settings uses the same inactive color as peers. */
+.main-tab,.exp-tab{position:relative;isolation:isolate}
+.exp-tab.settings{color:#a8bac9!important}
+.main-tab .ico,.main-tab b,.exp-tab>span,.exp-tab>small{position:relative;z-index:2}
+.main-tab.active,.exp-tab.active{color:#f8fbff!important}
+.main-tab.active:before,.exp-tab.active:before{
+  content:"";position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:46px;height:42px;border-radius:15px;
+  background:linear-gradient(180deg,rgba(84,157,213,.20),rgba(62,126,181,.10));
+  border:1px solid rgba(145,201,239,.18);
+  box-shadow:0 0 0 1px rgba(6,21,34,.12),0 5px 16px rgba(11,54,86,.18),inset 0 1px rgba(255,255,255,.06)
+}
+.exp-tab.active:before{width:48px;height:44px;border-radius:14px}
+.main-tab.active svg,.exp-tab.active svg{filter:drop-shadow(0 0 4px rgba(144,204,245,.22))}
+
+/* Route markers: classic teardrop pin, day-colour body, fixed next target, animated selection only. */
+.tc-marker{width:52px;height:66px!important;animation:none!important;translate:0 0!important;transform-origin:50% 82%;will-change:transform,translate}
+.tc-marker .body{
+  left:9px!important;top:14px!important;width:36px!important;height:36px!important;
+  border-radius:50% 50% 50% 7px!important;
+  transform:rotate(-45deg);
+  background:var(--mday)!important;
+  border:3px solid rgba(247,250,252,.92)!important;
+  box-shadow:0 7px 14px rgba(4,19,31,.30)!important
+}
+.tc-marker .num{transform:rotate(45deg);font-size:16px!important;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.32)}
+.tc-marker .cat{
+  top:0!important;width:22px!important;height:22px!important;
+  background:#edf4f7!important;color:#10263a!important;
+  border:2px solid var(--mday)!important;box-shadow:0 3px 8px rgba(3,20,32,.20)
+}
+.tc-marker .tip{display:none!important}
+.tc-marker.next:not(.selected){transform:scale(1.14)!important;z-index:28;animation:none!important}
+.tc-marker.next:not(.selected) .body{animation:none!important;box-shadow:0 8px 18px rgba(4,19,31,.34)!important}
+.tc-marker.selected{transform:scale(1.18)!important;z-index:45;animation:selectedMarker076 2.2s ease-in-out infinite!important}
+.tc-marker.selected .body{background:var(--mday)!important;animation:selectedHalo076 1.65s ease-in-out infinite!important}
+@keyframes selectedMarker076{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@keyframes selectedHalo076{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--mday) 24%,transparent),0 8px 18px rgba(4,19,31,.30)}50%{box-shadow:0 0 0 9px color-mix(in srgb,var(--mday) 4%,transparent),0 10px 20px rgba(4,19,31,.33)}}
+
+/* Navigation swipe: the entire revealed surface turns red/green. */
+.nav-banner{isolation:isolate;background:transparent!important}
+.nav-banner-card{border-radius:inherit;background:rgba(8,28,46,.97)!important;will-change:transform}
+.nav-swipe-action{
+  inset:0!important;width:100%!important;height:100%!important;
+  z-index:1;opacity:0!important;visibility:hidden;
+  padding:0 18px!important;border-radius:inherit;
+  transition:opacity .10s ease!important
+}
+.nav-swipe-action.nav-dismiss{justify-content:flex-start;background:#a9343e!important}
+.nav-swipe-action.nav-next{justify-content:flex-end;background:#268257!important}
+.nav-banner.swipe-left .nav-dismiss,.nav-banner.swipe-right .nav-next{opacity:1!important;visibility:visible}
+.nav-banner.swipe-left .nav-next,.nav-banner.swipe-right .nav-dismiss{opacity:0!important;visibility:hidden}
+
+/* Compact day picker: rounded as one object and easier upward swipe target. */
+.days-compact-panel{border-radius:22px!important;padding-top:0!important;overflow:hidden}
+.days-compact-handle{height:44px!important;cursor:grab;touch-action:none}
+.days-compact-handle span{width:52px!important;height:5px!important}
+.days-compact-track{overscroll-behavior-x:contain;overscroll-behavior-y:none}
+.day-compact-card{touch-action:pan-x}
+
+/* Expanded day picker: every card has exactly the same viewport-sized frame. */
+.full-overlay.days-mode{padding-top:calc(var(--safe-top) + 58px)!important;padding-bottom:calc(var(--safe-bottom) + 58px)!important}
+.days-mode .overlay-body{overflow:hidden!important}
+.days-mode .day-carousel-wrap{
+  width:100%;height:calc(100dvh - var(--safe-top) - var(--safe-bottom) - 116px);
+  min-height:0;display:flex;flex-direction:column;justify-content:stretch;overflow:hidden
+}
+.days-handle-zone{height:44px;flex:0 0 44px;display:grid;place-items:center;touch-action:none;cursor:grab}
+.days-handle-zone .days-handle{display:block;width:52px;height:5px;border-radius:6px;background:rgba(206,220,230,.48)}
+.days-mode .day-carousel{
+  flex:1;min-height:0;align-items:stretch;overflow-x:auto!important;overflow-y:hidden!important;
+  padding:0 9vw 2px!important;gap:12px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;overscroll-behavior-y:none
+}
+.days-mode .day-card{
+  flex:0 0 82vw;min-width:82vw!important;height:100%!important;max-height:none!important;
+  align-self:stretch;display:flex;flex-direction:column;overflow:hidden!important;
+  border-radius:22px!important;scroll-snap-align:center;scroll-snap-stop:always
+}
+.days-mode .day-card .hero{flex:0 0 min(31vh,245px);height:auto!important}
+.days-mode .day-card .day-content{
+  flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+  padding-bottom:10px!important
+}
+.days-mode .day-choose{position:sticky;bottom:0;z-index:5;box-shadow:0 -8px 18px rgba(9,31,50,.62)}
+.days-mode .day-indicator{flex:0 0 24px;height:24px!important}
+
+/* Filters: horizontal again, one tap, category-colour state. */
+.filters{justify-content:flex-start!important;overflow-x:auto!important;overflow-y:hidden!important;gap:12px!important;padding:1px 6px 12px!important;scroll-snap-type:x proximity;overscroll-behavior-x:contain}
+.filter{flex:0 0 auto!important;min-width:54px!important;transform:none!important;color:#9db2c2;scroll-snap-align:start}
+.filter i{width:42px!important;height:42px!important;border:2px solid rgba(184,211,232,.15)!important;background:#173853!important;transition:.14s ease}
+.filter.active{color:#fff!important;font-weight:700}
+.filter.active i{
+  outline:none!important;background:color-mix(in srgb,var(--filter-color) 32%,#173853)!important;
+  border-color:var(--filter-color)!important;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--filter-color) 16%,transparent),0 5px 12px rgba(4,18,29,.18)
+}
+
+/* New guide gallery uses image wrappers so online real photos can hydrate + cache. */
+.guide-gallery>.photo-wrap{display:block;width:100%;height:100%;border-radius:13px;overflow:hidden;min-width:0;min-height:0}
+.guide-gallery>.photo-wrap:first-child{grid-row:1/3}
+.guide-gallery>.photo-wrap img{width:100%;height:100%;object-fit:cover;border-radius:0!important}
+.guide-gallery>.photo-wrap .photo-badge{font-size:8px}
+
+@media(min-width:720px){
+ .days-mode .day-card{flex-basis:350px!important;min-width:350px!important}
+}
+
+/* 0.7.7 — LIVE TEST: unified dock, true half panels, editable itinerary, robust photos */
+:root{--compact-nav-h:52px;--expanded-nav-h:52px}
+
+/* The compact dock sits closer to the bottom; all attached palettes touch it. */
+.main-nav{bottom:calc(var(--safe-bottom) + 2px)!important;height:52px!important}
+.companion-logo{bottom:max(0px,calc(var(--safe-bottom) - 8px))!important}
+.main-nav.joined-panel{border-radius:0 0 22px 22px!important;border-top-color:rgba(184,211,232,.08)!important}
+.hold-menu.wide,.hold-menu.quick{
+  left:10px!important;right:10px!important;bottom:calc(var(--safe-bottom) + 53px)!important;
+  border-radius:22px 22px 0 0!important;border-bottom:0!important;
+  background:rgba(9,31,50,.975)!important;padding:10px!important;box-shadow:0 -12px 28px rgba(2,12,22,.26)!important
+}
+.hold-menu.wide button{min-height:62px!important}.hold-menu.quick button{min-height:64px!important}
+
+/* Every sheet is one continuous surface with its panel nav; compact means exactly one card + dock. */
+.expanded-nav{height:calc(var(--expanded-nav-h) + var(--safe-bottom))!important;padding:1px 8px calc(var(--safe-bottom) + 1px)!important}
+.sheet-body{bottom:calc(var(--expanded-nav-h) + var(--safe-bottom))!important;padding-bottom:6px!important}
+.sheet.state-mini{height:calc(200px + var(--safe-bottom))!important;border-radius:22px 22px 0 0!important}
+.sheet.state-mini .sheet-body{top:28px!important;bottom:calc(var(--expanded-nav-h) + var(--safe-bottom))!important;padding:0 12px 8px!important;overflow:hidden!important}
+.sheet.state-mini .mini-card{height:108px!important;min-height:108px!important;margin:0!important;padding:10px!important;grid-template-columns:72px minmax(0,1fr) 36px!important}
+.sheet.state-mini .mini-card .photo-wrap,.sheet.state-mini .mini-card img{width:72px!important;height:72px!important;border-radius:14px!important}
+.sheet.state-mini .mini-card .title{font-size:16px!important}.sheet.state-mini .mini-card .sub{font-size:10.5px!important}
+.sheet.state-mini .mini-card .expand{width:36px!important;height:36px!important}
+
+/* Half views really are half views, leaving enough map to understand filtering/navigation. */
+.sheet.view-sonar.state-two,.sheet.view-route.state-two{border-radius:24px 24px 0 0!important}
+.sheet.view-sonar .sheet-body,.sheet.view-route .sheet-body{top:35px!important;padding:0 14px 8px!important}
+.sheet.view-sonar .sheet-drag,.sheet.view-route .sheet-drag{height:42px!important}
+.map-controls.hidden-by-sheet{opacity:0!important}
+
+/* Sonar: title + radius share the first row; filters and results stay compact. */
+.sonar-heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin:0 0 8px}
+.sonar-heading-row h2{font-size:18px;margin:0;white-space:nowrap}.sonar-heading-row small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.sonar-heading-row .sonar-radius{display:flex;flex-wrap:nowrap;gap:4px;margin:0;overflow-x:auto;max-width:60%;scrollbar-width:none}
+.sonar-heading-row .sonar-radius::-webkit-scrollbar{display:none}
+.sonar-heading-row .sonar-radius .choice{min-width:auto;padding:7px 9px;font-size:10px;border-radius:11px;white-space:nowrap}
+.sonar-filters{margin:0!important;padding:0 2px 7px!important;gap:9px!important}
+.sonar-filters .filter{min-width:48px!important;font-size:9px!important}.sonar-filters .filter i{width:39px!important;height:39px!important}
+.sonar-results{margin-top:4px!important;gap:6px!important;padding-bottom:4px!important}
+.sonar-result-card{grid-template-columns:58px 1fr 16px!important;padding:7px!important;min-height:72px!important}
+.sonar-result-card .photo-wrap,.sonar-result-card img{width:58px!important;height:56px!important;border-radius:10px!important}
+.sonar-empty{font-size:11px;color:var(--muted)}
+
+/* Filter colours are identical to their marker category; OFF is graphite. */
+.filter{color:#8fa4b5!important;font-weight:600!important}
+.filter i{background:#0d2538!important;border-color:#294055!important;color:#9fb3c2!important;box-shadow:none!important}
+.filter.active{color:#f7fbff!important}
+.filter.active i{background:color-mix(in srgb,var(--filter-color) 46%,#102a43)!important;border-color:var(--filter-color)!important;color:#fff!important;box-shadow:0 0 0 2px color-mix(in srgb,var(--filter-color) 20%,transparent),0 5px 12px rgba(2,15,25,.22)!important}
+
+/* Strong, consistent active menu state. */
+.main-tab.active,.exp-tab.active{color:#fff!important}
+.main-tab.active:before,.exp-tab.active:before{background:rgba(72,145,201,.28)!important;border-color:rgba(148,208,247,.34)!important;box-shadow:0 0 0 1px rgba(106,181,235,.14),0 4px 14px rgba(36,117,177,.25)!important}
+.main-tab.active svg,.exp-tab.active svg{stroke:#fff!important;filter:drop-shadow(0 0 5px rgba(115,194,244,.42))!important}
+.exp-tab.settings:not(.active){color:#a8bac9!important}
+.companion-logo.active{filter:drop-shadow(0 0 9px rgba(83,174,235,.58)) drop-shadow(0 7px 12px rgba(2,12,22,.34))!important}
+.companion-logo.settings-active{filter:drop-shadow(0 0 9px rgba(218,174,77,.48)) drop-shadow(0 7px 12px rgba(2,12,22,.34))!important}
+.logo-dual-hint{position:absolute;right:-1px;bottom:2px;width:27px;height:27px;border-radius:50%;overflow:hidden;border:2px solid #dfe9ef;background:#102a43;box-shadow:0 3px 8px rgba(0,0,0,.34);display:grid;grid-template-columns:1fr 1fr;z-index:10}
+.logo-dual-hint i{display:grid;place-items:center;overflow:hidden}.logo-dual-hint i:first-child{background:#173f61}.logo-dual-hint i:last-child{background:#233247}.logo-dual-hint svg{width:14px;height:14px;stroke:#f5f8fb;fill:none;stroke-width:1.8}
+
+/* Navigation quick palette physically grows out of the compact dock. */
+.hold-menu.wide+*{} /* keeps selector stable on Safari */
+
+/* Compact day picker also grows directly out of the dock. */
+.full-overlay.days-compact .overlay-body{bottom:calc(var(--safe-bottom) + 53px)!important}
+.days-compact-panel{margin:0 10px!important;border-radius:22px 22px 0 0!important;border-bottom:0!important;padding-bottom:5px!important;background:rgba(9,31,50,.975)!important}
+.days-compact-handle{height:34px!important}.days-compact-handle span{width:46px!important;height:4px!important}
+.day-compact-card{height:142px!important}
+
+/* Large day view: a true fullscreen content mode, not a card floating on the map. */
+.full-overlay.days-mode{inset:0!important;background:#071827!important;padding:0!important;pointer-events:auto!important;z-index:2200!important}
+.full-overlay.days-mode .overlay-head{display:flex!important;position:absolute!important;left:0;right:0;top:0;height:calc(var(--safe-top) + 56px);padding:calc(var(--safe-top) + 8px) 14px 8px;z-index:40;background:linear-gradient(180deg,rgba(7,24,39,.98),rgba(7,24,39,.88),transparent)!important;border:0!important}
+.full-overlay.days-mode .overlay-head>div{visibility:hidden}.full-overlay.days-mode #overlayBack{visibility:hidden!important}.full-overlay.days-mode #overlayClose{margin-left:auto!important;width:40px;height:40px;border-radius:14px!important;background:rgba(12,40,61,.94)!important;border:1px solid rgba(184,211,232,.18)!important}
+.full-overlay.days-mode .overlay-body{position:absolute!important;inset:0 0 calc(var(--expanded-nav-h) + var(--safe-bottom)) 0!important;padding:calc(var(--safe-top) + 54px) 0 0!important;background:#071827!important;display:flex!important;justify-content:stretch!important}
+.full-overlay.days-mode .day-carousel-wrap{height:100%!important;width:100%!important;display:flex!important;flex-direction:column!important}
+.full-overlay.days-mode .days-handle-zone{display:none!important}
+.full-overlay.days-mode .day-carousel{flex:1!important;min-height:0!important;padding:0 5vw 4px!important;gap:10px!important;align-items:stretch!important}
+.full-overlay.days-mode .day-card{flex:0 0 90vw!important;min-width:90vw!important;height:100%!important;max-height:none!important;border-radius:22px!important;background:#0b2034!important}
+.full-overlay.days-mode .day-card .hero{flex:0 0 min(32vh,260px)!important}
+.full-overlay.days-mode .day-card .day-content{padding-bottom:12px!important}
+.full-overlay.days-mode .day-indicator{height:24px!important;flex:0 0 24px!important}
+.full-overlay.days-mode .overlay-nav{display:grid!important;height:calc(var(--expanded-nav-h) + var(--safe-bottom))!important;padding-bottom:var(--safe-bottom)!important}
+
+/* All top-level full windows use one top-right X. */
+.full-overlay.standard-full{background:#071827!important;z-index:2200!important}
+.full-overlay.standard-full .overlay-head{padding-top:calc(var(--safe-top) + 8px)!important;min-height:calc(var(--safe-top) + 58px)!important;background:#0b2034!important;border-bottom:1px solid rgba(184,211,232,.12)!important}
+.full-overlay.standard-full #overlayBack{display:none!important}.full-overlay.standard-full #overlayClose{margin-left:auto!important;width:40px!important;height:40px!important;border-radius:14px!important}
+.full-overlay.standard-full .overlay-body{padding-top:10px!important}
+.sheet.fullscreen .sheet-close-all{right:12px!important;top:calc(var(--safe-top) + 8px)!important}.sheet.fullscreen .sheet-close-all~.sheet-close-all{display:none!important}
+
+/* Itinerary half panel = full editor. Cards are slightly thicker and touch-reorderable. */
+.route-editor{padding-bottom:8px}.route-day-switch{touch-action:pan-y;min-height:47px;margin-bottom:8px!important;padding-right:2px}
+.route-day-switch h2{font-size:17px!important}.route-day-switch small{font-size:9px!important;display:block;max-width:58vw;line-height:1.25}
+.route-editor .head-actions .choice{padding:6px 8px;font-size:9px}
+.full-planner{gap:7px!important}
+.planner-card{min-height:84px!important;grid-template-columns:24px 72px minmax(0,1fr) 32px!important;padding:10px!important;border-radius:15px!important;touch-action:pan-y}
+.planner-card .photo-wrap,.planner-card img{width:72px!important;height:64px!important;border-radius:11px!important}
+.planner-card b{font-size:13px!important}.planner-card small{font-size:9.5px!important}.planner-transfer{color:#7fa0b8!important;margin-top:3px!important}
+.planner-card .drag{width:32px;height:50px;border:0;border-radius:10px;background:#173853;color:#a9c0d1;font-size:18px;touch-action:none;cursor:grab}
+.planner-card.reordering{opacity:.9;transform:scale(1.02);z-index:30;box-shadow:0 10px 22px rgba(0,0,0,.34);border-color:#4c8ac0}
+.route-add-row{display:grid;grid-template-columns:1fr 1fr;gap:7px;position:sticky;bottom:0;padding-top:8px;background:linear-gradient(180deg,transparent,#0b2034 28%)}
+.add-stop{min-height:45px!important;border-radius:13px!important;font-size:12px!important}.add-stop.secondary{background:#173853!important;border-color:#315571!important}
+.saved-add-list{display:grid;gap:8px}.saved-add-card{border:1px solid var(--line);background:#102a43;color:#fff;border-radius:15px;padding:8px;display:grid;grid-template-columns:62px 1fr 30px;gap:9px;align-items:center;text-align:left}
+.saved-add-card .photo-wrap,.saved-add-card img{width:62px;height:56px;border-radius:10px}.saved-add-card b{display:block;font-size:12px}.saved-add-card small{display:block;font-size:9px;color:var(--muted);margin-top:3px}.saved-add-card i{font-style:normal;font-size:20px;color:#75c79a}
+.add-help{font-size:11px;color:var(--muted);line-height:1.4;margin:3px 0 10px}
+
+/* Broken remote images are never visible: local Antalya/category photo stays underneath/fallback. */
+.photo-wrap{background:#173853!important}.photo-wrap img{background:#173853;color:transparent!important;font-size:0!important}
+
+@media(max-width:390px){
+ .sonar-heading-row{gap:5px}.sonar-heading-row h2{font-size:16px}.sonar-heading-row .sonar-radius{max-width:62%}.sonar-heading-row .sonar-radius .choice{padding:6px 7px;font-size:9px}
+ .planner-card{grid-template-columns:22px 64px minmax(0,1fr) 30px!important}.planner-card .photo-wrap,.planner-card img{width:64px!important;height:60px!important}
+}
+
+/* 0.7.8 RC — persistent 6-function dock, deterministic sheets, live-test cleanup */
+:root{--compact-nav-h:58px;--dock-gap:4px}
+.trip-test-badge{display:none!important}
+.expanded-nav,.overlay-nav{display:none!important}
+
+/* One persistent compact dock on every screen. Six function tabs + the centered Companion logo/home control. */
+.main-nav{
+  left:10px!important;right:10px!important;bottom:calc(var(--safe-bottom) + var(--dock-gap))!important;height:var(--compact-nav-h)!important;
+  display:grid!important;grid-template-columns:repeat(7,1fr)!important;align-items:center!important;padding:4px 5px!important;
+  background:rgba(8,28,46,.975)!important;border:1px solid rgba(184,211,232,.16)!important;border-radius:21px!important;
+  box-shadow:0 12px 30px rgba(2,12,22,.28)!important;backdrop-filter:blur(20px);z-index:1300!important
+}
+.main-nav:before,.main-nav:after{display:none!important}
+.logo-gap{grid-column:4!important;height:100%!important}
+#mainItinerary{grid-column:1}#mainDays{grid-column:2}#mainSonar{grid-column:3}#mainSettings{grid-column:5}#mainNotifications{grid-column:6}#mainNavigation{grid-column:7}
+.main-tab{height:48px!important;min-width:0!important;padding:0!important;color:#a9bac8!important}
+.main-tab svg{width:23px!important;height:23px!important}.main-tab.active{color:#fff!important}
+.main-tab.active:before{width:44px!important;height:42px!important;border-radius:14px!important;background:rgba(56,128,181,.30)!important;border:1px solid rgba(133,197,239,.32)!important}
+.companion-logo{
+  width:70px!important;height:70px!important;left:50%!important;bottom:max(0px,calc(var(--safe-bottom) - 8px))!important;
+  z-index:1400!important;opacity:1!important;pointer-events:auto!important;transform:translateX(-50%)!important
+}
+.companion-logo.hide{opacity:1!important;pointer-events:auto!important;transform:translateX(-50%)!important}
+.logo-dual-hint{display:none!important}.companion-logo.active{filter:drop-shadow(0 0 10px rgba(79,177,238,.62)) drop-shadow(0 8px 14px rgba(0,0,0,.34))!important}
+
+/* Every bottom sheet grows out of the persistent dock. No second nav, no gap, no overlap with the logo. */
+.sheet{z-index:1050!important;bottom:0!important;background:rgba(9,31,50,.982)!important;border-radius:24px 24px 0 0!important}
+.sheet-body{bottom:calc(var(--safe-bottom) + var(--compact-nav-h) + 22px)!important;padding-bottom:8px!important}
+.sheet.state-mini{height:calc(198px + var(--safe-bottom))!important}
+.sheet.state-mini .sheet-body{top:27px!important;bottom:calc(var(--safe-bottom) + var(--compact-nav-h) + 18px)!important;padding:0 12px 5px!important;overflow:hidden!important}
+.sheet.state-mini .mini-card{height:92px!important;min-height:92px!important;grid-template-columns:58px minmax(0,1fr) 34px!important;padding:8px!important}
+.sheet.state-mini .mini-card .photo-wrap,.sheet.state-mini .mini-card img{width:58px!important;height:58px!important;border-radius:12px!important}
+.sheet.state-mini .mini-card .title{font-size:14px!important}.sheet.state-mini .mini-card .sub{font-size:9.5px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sheet.state-mini .mini-card .expand{width:34px!important;height:34px!important}
+.sheet.view-sonar.state-two,.sheet.view-route.state-two,.sheet.view-poi.state-two{height:calc(50dvh + var(--safe-bottom))!important}
+.sheet.view-route.state-two{height:calc(52dvh + var(--safe-bottom))!important}
+.sheet.view-sonar .sheet-body,.sheet.view-route .sheet-body,.sheet.view-poi.state-two .sheet-body{top:34px!important}
+.sheet-drag{height:38px!important}.sheet-drag span{top:9px!important}
+.sheet-close-all{z-index:1500!important;top:calc(var(--safe-top) + 9px)!important;right:12px!important;width:42px!important;height:42px!important;border-radius:14px!important}
+
+/* Half POI view: compact photo + useful text. Large hero exists only in full Guide. */
+.poi-half-summary{display:grid;grid-template-columns:112px minmax(0,1fr) 36px;gap:10px;align-items:start;padding:5px 0 8px}
+.poi-half-photo,.poi-half-photo>img,.poi-half-photo img{width:112px!important;height:92px!important;border-radius:14px!important;object-fit:cover!important;overflow:hidden}
+.poi-half-copy{min-width:0}.poi-half-copy h2{font-size:18px;margin:2px 0 3px}.poi-half-copy p{font-size:11px;color:var(--muted);margin:0 0 4px}.poi-half-copy small{display:block;font-size:9px;color:#9eb1c0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.poi-half-copy>span{display:block;font-size:10.5px;color:#c5d2dc;line-height:1.32;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.poi-half-summary .expand{width:34px;height:34px;border-radius:11px;border:1px solid var(--line);background:#173853}
+.sheet.view-poi.state-two .actions{margin-top:3px!important}
+
+/* Sonar stays around half screen; saved places live here, while category colours match markers. */
+.sonar-heading-row{align-items:center!important;margin-bottom:7px!important}.sonar-heading-row>div:first-child{min-width:112px}
+.sonar-head-tools{display:flex;align-items:center;gap:5px;min-width:0;overflow:hidden}.sonar-saved{flex:0 0 34px;width:34px;height:34px;border:1px solid #315571;border-radius:11px;background:#173853;color:#fff;font-size:17px}
+.sonar-heading-row .sonar-radius{max-width:none!important;min-width:0}.sonar-heading-row .sonar-radius .choice{padding:7px 8px!important}
+.sonar-filters{padding-bottom:5px!important}.sonar-results{padding-bottom:6px!important}
+
+/* Planner swipe is a true fixed action layer: green on the left, red on the right. */
+.full-planner{gap:8px!important}.planner-swipe{position:relative;border-radius:16px;overflow:hidden;min-height:84px;background:#102a43}
+.planner-action-layer{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;border-radius:inherit;overflow:hidden;color:#fff;font-size:11px;font-weight:800;z-index:0}
+.planner-action-layer span{display:flex;align-items:center;padding:0 14px}.planner-action-layer .done{justify-content:flex-start;background:#268257}.planner-action-layer .skip{justify-content:flex-end;background:#a9343e}
+.planner-card{position:relative!important;z-index:2!important;margin:0!important;background:#102a43!important;transition:transform .14s cubic-bezier(.2,.8,.2,1)!important;will-change:transform}
+.planner-swipe.swipe-right .planner-card,.planner-swipe.swipe-left .planner-card{transition:none!important}
+.planner-swipe.reordering{z-index:20;overflow:visible}.planner-swipe.reordering .planner-card{box-shadow:0 10px 24px rgba(0,0,0,.36);border-color:#4c8ac0}
+.swipe-reveal{display:none!important}
+
+/* Navigation quick menu is visually one extension of the dock and never covers the central logo. */
+.hold-menu.wide,.hold-menu.quick{
+  z-index:1120!important;left:10px!important;right:10px!important;bottom:calc(var(--safe-bottom) + var(--dock-gap) + var(--compact-nav-h))!important;
+  transform:none!important;border-radius:22px 22px 0 0!important;border-bottom:0!important;background:rgba(9,31,50,.982)!important;
+  padding:10px 10px 12px!important;box-shadow:0 -12px 28px rgba(2,12,22,.22)!important
+}
+.hold-menu.wide{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:8px!important}.hold-menu.wide button{min-height:62px!important}
+.main-nav.joined-panel{border-radius:0 0 21px 21px!important}
+
+/* Compact day selector also joins directly to the dock. */
+.full-overlay.days-compact{z-index:1040!important}.full-overlay.days-compact .overlay-body{bottom:calc(var(--safe-bottom) + var(--dock-gap) + var(--compact-nav-h))!important}
+.days-compact-panel{margin:0 10px!important;border-radius:22px 22px 0 0!important;border-bottom:0!important;background:rgba(9,31,50,.982)!important}
+.day-compact-card{height:136px!important}
+
+/* Full overlays are stable, with one top-right X and the persistent compact dock beneath. */
+.full-overlay.standard-full{
+  z-index:1080!important;inset:0 0 calc(var(--safe-bottom) + var(--dock-gap) + var(--compact-nav-h)) 0!important;
+  padding:0!important;background:#071827!important;display:flex!important;flex-direction:column!important
+}
+.full-overlay.standard-full .overlay-head{
+  flex:0 0 calc(var(--safe-top) + 60px)!important;height:auto!important;min-height:0!important;
+  display:grid!important;grid-template-columns:1fr 44px!important;align-items:end!important;
+  padding:calc(var(--safe-top) + 8px) 14px 8px!important;background:#0b2034!important;border-bottom:1px solid rgba(184,211,232,.12)!important
+}
+.full-overlay.standard-full .overlay-head>div{grid-column:1!important;min-width:0!important;align-self:center}.full-overlay.standard-full .overlay-head b{font-size:19px!important}.full-overlay.standard-full .overlay-head small{font-size:11px!important;display:block!important;margin-top:2px}
+.full-overlay.standard-full #overlayBack{display:none!important}.full-overlay.standard-full #overlayClose{grid-column:2!important;grid-row:1!important;align-self:center!important;width:42px!important;height:42px!important;border-radius:14px!important;margin:0!important}
+.full-overlay.standard-full .overlay-body{flex:1!important;min-height:0!important;padding:12px 14px 18px!important;overflow:auto!important}
+.settings-section{max-width:720px;margin-left:auto;margin-right:auto}.settings-section:first-child{margin-top:0!important}.settings-section h2{margin:8px 0!important}.setting-card{overflow:hidden}.setting-row{min-width:0}.setting-row>div{min-width:0}
+.test-environment{border-color:rgba(213,59,67,.34)!important;background:rgba(116,36,44,.16)!important}
+
+/* Full day view fills the available screen above the persistent dock. */
+.full-overlay.days-mode{z-index:1080!important;inset:0 0 calc(var(--safe-bottom) + var(--dock-gap) + var(--compact-nav-h)) 0!important;padding:0!important}
+.full-overlay.days-mode .overlay-body{inset:0!important;bottom:0!important;padding:calc(var(--safe-top) + 54px) 0 0!important}
+.full-overlay.days-mode .overlay-nav{display:none!important}
+.full-overlay.days-mode .day-carousel-wrap{height:100%!important}.full-overlay.days-mode .day-card{height:100%!important}
+
+/* Favorites: one clean list, no broken segmented header. */
+.favorites-stable{display:grid;gap:9px}.favorites-stable .fav-card{width:100%;grid-template-columns:66px minmax(0,1fr) 24px;text-align:left;color:inherit;border:1px solid var(--line);background:#102a43;padding:9px;border-radius:15px}.favorites-stable .fav-card .photo-wrap,.favorites-stable .fav-card img{width:66px;height:58px;border-radius:10px}.favorites-stable .fav-card span{min-width:0}.favorites-stable .fav-card i{font-style:normal;font-size:22px;color:#9fb3c2}
+
+/* Navigation banner: clip every swipe layer to the rounded card; no white artefact under the arrow. */
+.nav-banner{overflow:hidden!important;padding:0!important;display:block!important;background:transparent!important}
+.nav-banner-card{position:relative!important;z-index:3!important;display:grid!important;grid-template-columns:46px minmax(0,1fr)!important;gap:10px!important;align-items:center!important;padding:10px 12px!important;border-radius:16px!important;overflow:hidden!important}
+.nav-arrow{line-height:1!important;display:grid!important;place-items:center!important;background:none!important;border:0!important;text-decoration:none!important}.nav-arrow:before,.nav-arrow:after{display:none!important;content:none!important}
+.nav-swipe-action{border-radius:16px!important;overflow:hidden!important}
+
+/* Main menu and overlay content must never stack stale surfaces. */
+.main-nav.hide{display:grid!important}
+
+@media(max-width:390px){
+ .main-nav{left:6px!important;right:6px!important}.main-tab svg{width:21px!important;height:21px!important}.companion-logo{width:66px!important;height:66px!important;bottom:max(0px,calc(var(--safe-bottom) - 6px))!important}
+ .poi-half-summary{grid-template-columns:96px minmax(0,1fr) 32px}.poi-half-photo,.poi-half-photo>img,.poi-half-photo img{width:96px!important;height:82px!important}
+ .sonar-heading-row>div:first-child{min-width:102px}.sonar-heading-row h2{font-size:15px!important}.sonar-saved{width:30px;height:30px;flex-basis:30px}.sonar-heading-row .sonar-radius .choice{font-size:8.5px!important;padding:6px 6px!important}
+}
+.main-nav{transform:none!important;width:auto!important}
+
+/* 0.7.8 FINAL TEST — unified 6-function dock + persistent Companion logo */
+:root{--compact-nav-h:58px;--dock-gap:8px}
+.trip-test-badge{display:none!important}
+.expanded-nav,.overlay-nav{display:none!important}
+.main-nav{
+  left:12px!important;right:12px!important;width:auto!important;height:58px!important;
+  bottom:calc(var(--safe-bottom) + var(--dock-gap))!important;transform:none!important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) 82px repeat(3,minmax(0,1fr))!important;
+  padding:2px 7px!important;border-radius:21px!important;background:rgba(9,31,50,.97)!important;
+  z-index:2400!important
+}
+.main-tab{height:52px!important;min-width:0!important;padding:0!important;position:relative}
+.main-tab .ico{font-size:19px!important;line-height:1!important}.main-tab svg{width:21px!important;height:21px!important}
+.main-tab b{display:none!important}.logo-gap{height:100%}
+.companion-logo{width:76px!important;height:76px!important;bottom:calc(var(--safe-bottom) - 1px)!important;z-index:2500!important}
+.companion-logo.hide{opacity:1!important;pointer-events:auto!important;transform:translateX(-50%) scale(1)!important}
+.logo-dual-hint{display:none!important}
+.main-nav.joined-panel{border-radius:0 0 21px 21px!important;border-top-color:rgba(184,211,232,.08)!important}
+.main-tab.active:before{width:42px!important;height:42px!important;border-radius:13px!important}
+
+/* All bottom sheets grow from the same dock surface; no gap and no panel can cover the logo. */
+.sheet{bottom:calc(var(--safe-bottom) + var(--dock-gap) + 57px)!important;border-radius:22px 22px 0 0!important;z-index:2200!important}
+.sheet.open{box-shadow:0 -12px 34px rgba(2,12,22,.30)!important}
+.sheet-body{bottom:0!important;padding-bottom:10px!important}
+.sheet.state-mini{height:142px!important}
+.sheet.state-mini .sheet-body{top:27px!important;bottom:0!important;padding:0 12px 8px!important}
+.sheet.state-mini .mini-card{height:104px!important;min-height:104px!important;grid-template-columns:68px minmax(0,1fr) 34px!important;padding:9px!important}
+.sheet.state-mini .mini-card .photo-wrap,.sheet.state-mini .mini-card img{width:68px!important;height:68px!important;border-radius:13px!important}
+.sheet.state-one{height:43vh!important}.sheet.state-two{height:52vh!important}
+.sheet.view-sonar.state-two,.sheet.view-route.state-two{height:50vh!important}
+.sheet.fullscreen{bottom:0!important;height:100dvh!important;z-index:2600!important;border-radius:0!important}
+.sheet.fullscreen .sheet-body{padding-bottom:calc(var(--safe-bottom) + 16px)!important}
+.sheet.fullscreen~.main-nav,.sheet.fullscreen~.companion-logo{z-index:2500}
+
+/* Full overlays keep the six-button dock + logo available. */
+.full-overlay.standard-full,.full-overlay.days-mode{bottom:calc(var(--safe-bottom) + var(--dock-gap) + 58px)!important;height:auto!important;z-index:2300!important}
+.full-overlay.standard-full .overlay-body{padding-bottom:18px!important}
+.full-overlay.standard-full .overlay-head{padding:calc(var(--safe-top) + 8px) 14px 8px!important;min-height:calc(var(--safe-top) + 58px)!important;display:flex!important;align-items:flex-end!important}
+.full-overlay.standard-full .overlay-head>div{min-width:0!important;flex:1!important}.full-overlay.standard-full #overlayTitle{font-size:20px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.full-overlay.standard-full #overlaySubtitle{font-size:11px!important}
+.full-overlay.standard-full #overlayClose{position:static!important;flex:0 0 40px!important;margin-left:10px!important}
+.full-overlay.standard-full #overlayBack{display:none!important}
+.settings-section{padding:0 14px 12px!important}.settings-section h2{font-size:13px!important;letter-spacing:.08em;margin:14px 0 8px!important}
+.setting-card{margin-bottom:9px!important}.setting-row{gap:10px!important}.choice-row{flex-wrap:wrap!important}
+.test-mode-card{border-style:dashed!important;opacity:.9}
+
+/* Sonar half sheet: compact and useful map remains visible. */
+.sonar-heading-row{align-items:center!important}.sonar-heading-row>div:first-child{min-width:0!important}.sonar-heading-row h2{font-size:17px!important}.sonar-heading-row small{font-size:9.5px!important;white-space:nowrap}.inline-fav{border:0;background:none;color:#d9e7f2;font-size:9.5px;padding:0 0 0 4px}
+.sonar-heading-row .sonar-radius{max-width:58%!important}.sonar-filters{overflow-x:auto!important;justify-content:flex-start!important;scrollbar-width:none}.sonar-filters::-webkit-scrollbar{display:none}.sonar-filters .filter{flex:0 0 54px!important}
+
+/* POI middle state: smaller image + useful text. Full Guide keeps the large hero. */
+.sheet.state-two.view-poi .poi-detail-hero{height:105px!important;border-radius:15px!important;margin-bottom:8px!important}
+.sheet.state-two.view-poi .poi-detail-hero img{height:105px!important}
+.sheet.state-two.view-poi .poi-detail-head h2{font-size:18px!important;margin:0 0 2px!important}
+.sheet.state-two.view-poi .guide-block{margin-top:8px!important;padding:9px!important}.sheet.state-two.view-poi .guide-block h3{font-size:12px!important;margin:0 0 4px!important}.sheet.state-two.view-poi .guide-block p{font-size:10.5px!important;line-height:1.35!important;margin:0!important}
+.guide-full .guide-hero,.guide-hero.photo-wrap{height:min(34vh,290px)!important}
+
+/* Planner swipe: fixed split action card under the moving itinerary card. */
+.planner-swipe{position:relative;border-radius:15px;overflow:hidden;min-height:84px;background:#0b2034}
+.planner-actions-bg{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;z-index:0;color:#fff;font-size:11px;font-weight:800}
+.planner-actions-bg span{display:flex;align-items:center;padding:0 14px}.planner-actions-bg .skip{justify-content:flex-start;background:#9f3039}.planner-actions-bg .done{justify-content:flex-end;background:#278158}
+.planner-card{position:relative!important;z-index:2!important;background:#102a43!important;transition:transform .16s ease!important;margin:0!important}
+.planner-card.reordering{z-index:30!important}.planner-card .swipe-reveal{display:none!important}
+
+/* Navigation arrow is a pure SVG; no glyph artefact below it. */
+.nav-arrow{display:grid!important;place-items:center!important;width:42px!important;height:46px!important;font-size:0!important;background:transparent!important}
+.nav-arrow svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;overflow:visible}.nav-arrow:before,.nav-arrow:after{display:none!important;content:none!important}
+
+/* Next target is larger but static; selected marker alone animates. */
+.tc-marker.next:not(.selected){transform:scale(1.10);transform-origin:50% 70%}.tc-marker.next:not(.selected) .body{animation:none!important}.tc-marker.selected .body{animation:selectedHalo 1.25s ease-in-out infinite!important}
+
+@media(max-width:390px){
+ .main-nav{left:8px!important;right:8px!important;grid-template-columns:repeat(3,minmax(0,1fr)) 72px repeat(3,minmax(0,1fr))!important;padding-left:3px!important;padding-right:3px!important}
+ .companion-logo{width:70px!important;height:70px!important}.main-tab .ico{font-size:18px!important}
+}
+/* 0.7.9 RC1 — stability layout engine + Favorites dock + transit handoff */
+:root{
+  --dock-h:58px;
+  --dock-bottom:max(10px, calc(var(--safe-bottom) + 2px));
+  --dock-top:calc(var(--dock-bottom) + var(--dock-h));
+}
+
+/* One deterministic dock. Route · Days · Favorites · LOGO/Sonar · Settings · Notifications · Navigation */
+.main-nav{
+  position:fixed!important;
+  left:10px!important;right:10px!important;bottom:var(--dock-bottom)!important;
+  width:auto!important;height:var(--dock-h)!important;
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr)) 80px repeat(3,minmax(0,1fr))!important;
+  align-items:center!important;padding:2px 5px!important;
+  background:#091f32!important;border:1px solid rgba(184,211,232,.16)!important;
+  border-radius:21px!important;box-shadow:0 12px 30px rgba(2,12,22,.30)!important;
+  transform:none!important;overflow:visible!important;z-index:3000!important;
+}
+#mainItinerary{grid-column:1!important}#mainDays{grid-column:2!important}#mainFavorites{grid-column:3!important}
+.logo-gap{grid-column:4!important}#mainSettings{grid-column:5!important}#mainNotifications{grid-column:6!important}#mainNavigation{grid-column:7!important}
+#mainSonar{display:none!important}
+.main-tab{height:50px!important;padding:0!important;min-width:0!important;position:relative!important;color:#a9bac8!important}
+.main-tab b{display:none!important}.main-tab svg{width:21px!important;height:21px!important}.main-tab .ico{line-height:1!important}
+.main-tab.active{color:#fff!important}.main-tab.active:before{content:""!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:42px!important;height:42px!important;border-radius:13px!important;background:rgba(56,128,181,.28)!important;border:1px solid rgba(133,197,239,.30)!important;z-index:-1!important}
+.main-nav.joined-panel{border-radius:0 0 21px 21px!important;border-top-color:rgba(184,211,232,.07)!important}
+.companion-logo{
+  position:fixed!important;left:50%!important;bottom:calc(var(--dock-bottom) - 7px)!important;
+  width:74px!important;height:74px!important;transform:translateX(-50%)!important;
+  z-index:3100!important;opacity:1!important;pointer-events:auto!important;background:transparent!important;border:0!important;
+  filter:drop-shadow(0 8px 14px rgba(0,0,0,.38))!important;
+}
+.companion-logo.hide{opacity:1!important;pointer-events:auto!important;transform:translateX(-50%)!important}
+.companion-logo.active{filter:drop-shadow(0 0 11px rgba(79,177,238,.64)) drop-shadow(0 8px 14px rgba(0,0,0,.38))!important}
+
+/* Common sheet engine. The panel always stops exactly at the dock top. */
+.sheet{
+  position:fixed!important;left:0!important;right:0!important;bottom:var(--dock-top)!important;
+  background:#091f32!important;border:1px solid rgba(184,211,232,.14)!important;border-bottom:0!important;
+  border-radius:23px 23px 0 0!important;z-index:2200!important;overflow:hidden!important;
+  box-shadow:0 -12px 34px rgba(2,12,22,.30)!important;backdrop-filter:none!important;
+  transition:height .22s cubic-bezier(.2,.8,.2,1)!important;
+}
+.sheet.state-closed{display:none!important;height:0!important}.sheet.open{display:block!important;pointer-events:auto!important}
+.sheet.state-mini{height:132px!important}.sheet.state-one{height:34dvh!important}.sheet.state-two{height:50dvh!important}
+.sheet.view-sonar.state-two{height:min(42dvh,370px)!important}.sheet.view-route.state-two{height:50dvh!important}.sheet.view-poi.state-two{height:48dvh!important}
+.sheet.dragging{height:var(--sheet-h)!important;transition:none!important}
+.sheet-drag{position:absolute!important;top:0!important;left:0!important;right:0!important;height:42px!important;z-index:40!important;touch-action:none!important;cursor:ns-resize!important}
+.sheet-drag span{top:10px!important;width:44px!important;height:4px!important;background:rgba(190,209,223,.48)!important}
+.sheet-body{position:absolute!important;left:0!important;right:0!important;top:30px!important;bottom:0!important;overflow:auto!important;padding:0 14px 12px!important;-webkit-overflow-scrolling:touch!important}
+.sheet.state-mini .sheet-body{top:27px!important;padding:0 12px 8px!important;overflow:hidden!important}
+.sheet.state-mini .mini-card{height:96px!important;min-height:96px!important;margin:0!important;grid-template-columns:64px minmax(0,1fr) 34px!important;padding:8px!important}
+.sheet.state-mini .mini-card .photo-wrap,.sheet.state-mini .mini-card img{width:64px!important;height:64px!important;border-radius:12px!important}
+.sheet.state-mini .mini-card .title{font-size:15px!important}.sheet.state-mini .mini-card .sub{font-size:10px!important}
+.sheet.fullscreen{
+  display:block!important;position:fixed!important;inset:0!important;height:100dvh!important;bottom:0!important;
+  border:0!important;border-radius:0!important;background:#071827!important;z-index:2450!important;
+}
+.sheet.fullscreen .sheet-body{top:calc(var(--safe-top) + 42px)!important;bottom:0!important;padding:0 14px calc(var(--dock-top) + 16px)!important;background:#071827!important}
+.sheet-close-all{position:fixed!important;top:calc(var(--safe-top) + 10px)!important;right:12px!important;z-index:2700!important;width:42px!important;height:42px!important;border-radius:14px!important}
+
+/* POI half state: text first, large hero only in full Guide. */
+.poi-half-summary{grid-template-columns:94px minmax(0,1fr) 34px!important;gap:10px!important;align-items:center!important}
+.poi-half-photo,.poi-half-photo>img,.poi-half-photo img{width:94px!important;height:82px!important;border-radius:13px!important}
+.poi-half-copy h2{font-size:17px!important;margin:0 0 2px!important}.poi-half-copy p,.poi-half-copy small{font-size:10px!important}.poi-half-copy span{font-size:10px!important;line-height:1.3!important;display:block!important;margin-top:3px!important}
+
+/* Route/Sonar content scrolls inside the sheet instead of changing panel geometry. */
+.route-editor,.sonar-results{min-height:0!important}.route-add-row{position:sticky!important;bottom:0!important;background:linear-gradient(180deg,rgba(9,31,50,0),#091f32 30%)!important;padding-bottom:3px!important}
+.sonar-heading-row{margin-bottom:7px!important}.sonar-results{padding-bottom:6px!important}.sonar-empty{margin-bottom:0!important}
+
+/* Compact days is another joined sheet, not a floating layer. */
+.full-overlay.days-compact{position:fixed!important;inset:0!important;z-index:2100!important;background:transparent!important;pointer-events:none!important}
+.full-overlay.days-compact .overlay-head{display:none!important}
+.full-overlay.days-compact .overlay-body{position:absolute!important;left:0!important;right:0!important;bottom:var(--dock-top)!important;height:178px!important;padding:28px 0 8px!important;overflow:hidden!important;pointer-events:auto!important;background:#091f32!important;border-radius:23px 23px 0 0!important;border:1px solid rgba(184,211,232,.14)!important;border-bottom:0!important}
+.days-compact-handle{position:absolute!important;left:0!important;right:0!important;top:0!important;height:34px!important;display:grid!important;place-items:start center!important;padding-top:9px!important;touch-action:none!important}
+.days-compact-handle span{width:44px!important;height:4px!important;border-radius:4px!important;background:rgba(190,209,223,.48)!important}
+.days-compact-track{height:116px!important;align-items:stretch!important}.day-compact-card{height:116px!important}
+
+/* Full windows are truly opaque; map and Leaflet attribution can never bleed through. */
+.full-overlay.standard-full,.full-overlay.days-mode{
+  position:fixed!important;inset:0!important;bottom:0!important;height:100dvh!important;
+  background:#071827!important;z-index:2400!important;pointer-events:auto!important;padding:0!important;
+}
+.full-overlay.standard-full .overlay-head{position:relative!important;z-index:2!important;min-height:calc(var(--safe-top) + 64px)!important;padding:calc(var(--safe-top) + 10px) 14px 10px!important;background:#0b2034!important;border-bottom:1px solid rgba(184,211,232,.12)!important;display:flex!important;align-items:flex-end!important}
+.full-overlay.standard-full .overlay-body{position:absolute!important;inset:calc(var(--safe-top) + 64px) 0 0 0!important;padding:12px 14px calc(var(--dock-top) + 14px)!important;overflow:auto!important;background:#071827!important}
+.full-overlay.standard-full #overlayBack{display:none!important}.full-overlay.standard-full #overlayClose{margin-left:auto!important;width:42px!important;height:42px!important;border-radius:14px!important;flex:0 0 42px!important}
+.full-overlay.days-mode .overlay-head{display:flex!important;position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:4!important;height:calc(var(--safe-top) + 58px)!important;padding:calc(var(--safe-top) + 8px) 14px 8px!important;background:#071827!important;border:0!important}
+.full-overlay.days-mode .overlay-head>div,#overlayBack{visibility:hidden!important}.full-overlay.days-mode #overlayClose{visibility:visible!important;margin-left:auto!important;width:42px!important;height:42px!important;border-radius:14px!important}
+.full-overlay.days-mode .overlay-body{position:absolute!important;inset:calc(var(--safe-top) + 58px) 0 0!important;padding:0 0 var(--dock-top)!important;background:#071827!important;overflow:hidden!important}
+.full-overlay.days-mode .day-carousel-wrap{height:100%!important}.full-overlay.days-mode .day-carousel{height:calc(100% - 24px)!important;align-items:stretch!important}.full-overlay.days-mode .day-card{height:100%!important;max-height:none!important;overflow:auto!important}
+
+/* Hold/quick menus are a direct extension of the dock. */
+.hold-menu.wide,.hold-menu.quick{position:fixed!important;left:10px!important;right:10px!important;bottom:var(--dock-top)!important;z-index:2950!important;transform:none!important;width:auto!important;background:#091f32!important;border:1px solid rgba(184,211,232,.14)!important;border-bottom:0!important;border-radius:22px 22px 0 0!important;box-shadow:0 -12px 30px rgba(2,12,22,.28)!important}
+.hold-menu.wide{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:8px!important;padding:10px!important}.hold-menu.wide button{min-height:62px!important}
+
+/* Overlay/sheet layering is fixed. */
+#map{z-index:1!important}.map-controls{z-index:900!important;bottom:calc(var(--dock-top) + 18px)!important}.notification-zone{z-index:3300!important}
+.leaflet-control-attribution{z-index:10!important}
+
+/* Planner swipe has one exact-size split action layer underneath; never leaves a red tail. */
+.planner-swipe{position:relative!important;border-radius:16px!important;overflow:hidden!important;min-height:84px!important;background:transparent!important}
+.planner-action-layer{position:absolute!important;inset:0!important;display:grid!important;grid-template-columns:1fr 1fr!important;border-radius:16px!important;overflow:hidden!important;z-index:0!important}
+.planner-action-layer .done{background:#268257!important;justify-content:flex-start!important}.planner-action-layer .skip{background:#a9343e!important;justify-content:flex-end!important}
+.planner-card{position:relative!important;z-index:2!important;margin:0!important;border-radius:16px!important;background:#102a43!important}
+
+/* Transit hand-off menu labels fit comfortably. */
+.hold-menu button b{line-height:1.15!important;text-align:center!important}.hold-menu button span{min-height:22px!important}
+
+@media(max-width:390px){
+  .main-nav{left:7px!important;right:7px!important;grid-template-columns:repeat(3,minmax(0,1fr)) 72px repeat(3,minmax(0,1fr))!important}
+  .companion-logo{width:70px!important;height:70px!important}
+  .hold-menu.wide,.hold-menu.quick{left:7px!important;right:7px!important}
+  .poi-half-summary{grid-template-columns:82px minmax(0,1fr) 32px!important}.poi-half-photo,.poi-half-photo>img,.poi-half-photo img{width:82px!important;height:74px!important}
+}
+
+
+/* 0.7.9 RC3 — route/sonar final layout stabilization */
+/* Keep Navigation exactly as RC2; only stabilize Route and Sonar sheets. */
+.sheet.view-route .sheet-body,
+.sheet.view-sonar .sheet-body{overflow:hidden!important}
+
+/* Route: fixed header + scrollable cards + always-visible action buttons. */
+.route-editor{height:100%!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.route-editor .planner-head{flex:0 0 auto!important;position:relative!important;z-index:20!important;background:#091f32!important;padding-bottom:8px!important}
+.route-editor .full-planner{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch!important;padding:0 0 8px!important;scrollbar-gutter:stable}
+.route-editor .route-add-row{position:static!important;flex:0 0 auto!important;z-index:30!important;margin:0!important;padding:8px 0 4px!important;background:#091f32!important;box-shadow:0 -10px 18px rgba(9,31,50,.94)!important}
+.route-editor .route-add-row .add-stop{min-height:46px!important}
+.sheet.view-route.state-two{height:50dvh!important}
+.sheet.fullscreen.view-route .sheet-body{top:calc(var(--safe-top) + 52px)!important;bottom:var(--dock-top)!important;padding:0 14px 8px!important;overflow:hidden!important;background:#071827!important}
+.sheet.fullscreen.view-route .route-editor .planner-head{background:#071827!important;padding-top:4px!important}
+.sheet.fullscreen.view-route .route-editor .route-add-row{background:#071827!important;box-shadow:0 -10px 18px rgba(7,24,39,.96)!important;padding-bottom:6px!important}
+.sheet.fullscreen.view-route .full-planner{padding-bottom:10px!important}
+
+/* Sonar: one clean vertical layout; all four distance choices stay on one row. */
+.sheet.view-sonar.state-two{height:var(--sonar-sheet-h,380px)!important}
+.sonar-layout{height:100%!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.sonar-layout .sonar-heading-row{flex:0 0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;margin:0 0 6px!important}
+.sonar-layout .sonar-heading-row>div{min-width:0!important}.sonar-layout .sonar-heading-row h2{margin:0!important;white-space:nowrap!important}.sonar-layout .sonar-heading-row small{display:block!important;margin-top:2px!important}
+.sonar-layout .sonar-saved{flex:0 0 38px!important;width:38px!important;height:38px!important}
+.sonar-radius-row{flex:0 0 auto!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important;max-width:none!important;width:100%!important;margin:0 0 7px!important;flex-wrap:nowrap!important}
+.sonar-radius-row .choice{min-width:0!important;width:100%!important;padding:7px 2px!important;font-size:10px!important;white-space:nowrap!important}
+.sonar-layout .sonar-filters{flex:0 0 auto!important;margin-bottom:7px!important;padding-bottom:2px!important}
+.sonar-layout .sonar-results{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch!important;padding:0 0 4px!important}
+
+/* The planner card layer always owns its exact footprint; no action-color tail. */
+.planner-swipe{isolation:isolate!important}
+.planner-action-layer{pointer-events:none!important}
+
+@media(max-width:390px){
+ .sonar-radius-row{gap:5px!important}.sonar-radius-row .choice{font-size:9px!important;padding:6px 1px!important}
+ .sheet.view-sonar.state-two{height:var(--sonar-sheet-h,360px)!important}
+}
+
+/* RC3 QA fix — grid rows must never stretch the hidden swipe-action layer. */
+.route-editor .full-planner,
+.sonar-layout .sonar-results{
+  align-content:start!important;
+  grid-auto-rows:max-content!important;
+}
+.planner-swipe{height:auto!important;min-height:0!important}
+.planner-swipe>.planner-card{min-height:84px!important}
+.sonar-result{height:max-content!important;min-height:0!important}
+
+/* 0.7.9 RC4 independent QA — offline fallback and final hardening */
+.is-offline .offline-map{display:block!important;position:absolute!important;inset:0!important;z-index:0!important;background:#dfe5e3 url('./assets/offline-map.svg') center/cover no-repeat!important}
+.is-offline #map{background:transparent!important}
+.is-offline #map .leaflet-tile-pane{opacity:.18!important}
+.is-offline #map .leaflet-control-attribution{opacity:.7!important}
+
+
+/* 0.7.9 RC5 — release stabilization: mini POI, reorder, route handle, navigation steps */
+/* The app uses a dark Companion surface even when device/theme resolves light; force mini POI legibility and isolation. */
+.sheet.view-poi.state-mini{background:#091f32!important;isolation:isolate!important}
+.sheet.view-poi.state-mini .sheet-body{background:#091f32!important;z-index:2!important;overflow:hidden!important}
+.sheet.view-poi.state-mini .mini-card{position:relative!important;z-index:3!important;background:#102a43!important;color:#f5f7f8!important;border-color:rgba(184,211,232,.16)!important;overflow:hidden!important}
+.sheet.view-poi.state-mini .mini-card>div{position:relative!important;z-index:4!important;min-width:0!important;color:#f5f7f8!important}
+.sheet.view-poi.state-mini .mini-card .title{color:#f5f7f8!important}.sheet.view-poi.state-mini .mini-card .sub{color:#9fb4c5!important}
+.sheet.view-poi.state-mini .mini-card .photo-wrap,.sheet.view-poi.state-mini .mini-card .expand{position:relative!important;z-index:5!important}
+.sheet.view-poi.state-mini .planner-action-layer,.sheet.view-poi.state-mini .swipe-reveal{display:none!important}
+
+/* POI priority: Guide → route → Navigation. Secondary actions remain available but visually quieter. */
+.poi-primary-actions{display:grid!important;grid-template-columns:1fr 1.15fr 1.15fr .72fr .72fr!important;gap:7px!important;overflow-x:auto!important}
+.poi-primary-actions .action{min-width:72px!important}.poi-primary-actions .action:nth-child(-n+3){font-weight:800!important}
+
+/* Route reorder: only the ≡ handle owns vertical drag; list itself may autoscroll while reordering. */
+.planner-card .drag{touch-action:none!important;user-select:none!important;-webkit-user-select:none!important;cursor:grab!important}
+.planner-reorder-active,.planner-reorder-active *{overscroll-behavior:contain!important}
+.planner-reorder-active .full-planner{touch-action:none!important;scroll-behavior:auto!important}
+.planner-swipe.reordering{position:relative!important;z-index:60!important;opacity:.96!important;transform:scale(1.012)!important}
+.planner-swipe.reordering .planner-card{border-color:#69a8da!important;box-shadow:0 12px 30px rgba(0,0,0,.42)!important}
+
+/* Route sheet handle: much larger invisible hit area, same discreet visual handle. */
+.sheet.view-route .sheet-drag{height:58px!important;touch-action:none!important}
+.sheet.view-route .sheet-drag span{top:10px!important}
+.sheet.view-route.state-two .sheet-body{top:40px!important}
+.sheet.fullscreen.view-route .sheet-body{top:calc(var(--safe-top) + 58px)!important}
+
+/* True fullscreen means no map or Leaflet strip can bleed through at any edge. */
+body.sheet-fullscreen #map,body.sheet-fullscreen #offlineMap,body.overlay-fullscreen #map,body.overlay-fullscreen #offlineMap{visibility:hidden!important}
+body.sheet-fullscreen .leaflet-control-attribution,body.overlay-fullscreen .leaflet-control-attribution{display:none!important}
+body.sheet-fullscreen #app,body.overlay-fullscreen #app{background:#071827!important}
+.sheet.fullscreen{inset:0!important;width:100vw!important;height:100dvh!important;bottom:0!important;background:#071827!important}
+
+/* Companion navigation step view. Map route keeps running underneath and returns with one tap. */
+.full-overlay.nav-steps-mode{background:#071827!important}
+.full-overlay.nav-steps-mode .overlay-body{background:#071827!important;padding-bottom:calc(var(--dock-top) + 18px)!important}
+.nav-steps-summary{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:8px;margin-bottom:10px}
+.nav-steps-summary>div{background:#102a43;border:1px solid rgba(184,211,232,.15);border-radius:14px;padding:10px;min-width:0}
+.nav-steps-summary small{display:block;color:#9fb4c5;font-size:10px;margin-bottom:3px}.nav-steps-summary b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-map-return{position:sticky;top:0;z-index:8;width:100%;min-height:48px;border:1px solid #2d7ee8;border-radius:14px;background:#286fd1;color:white;font-weight:800;margin:0 0 10px}
+.nav-step-list{display:grid;gap:8px;padding-bottom:14px}.nav-step{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:center;background:#102a43;border:1px solid rgba(184,211,232,.13);border-radius:14px;padding:10px}
+.nav-step>span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#173853;color:#dce9f2;font-weight:800;font-size:11px}.nav-step b{display:block;font-size:13px}.nav-step small{display:block;color:#9fb4c5;font-size:10px;margin-top:3px}
+.nav-banner-card{cursor:pointer!important}.nav-banner-card:after{content:'Lépések';position:absolute;right:10px;bottom:5px;font-size:8px;color:#8fb3cf;opacity:.8}
+
+@media(max-width:390px){
+ .poi-primary-actions{grid-template-columns:1fr 1.08fr 1.08fr .68fr .68fr!important}.poi-primary-actions .action{min-width:66px!important;font-size:9.5px!important}
+ .nav-steps-summary{grid-template-columns:1fr 1fr}.nav-steps-summary>div:first-child{grid-column:1/-1}
+}
+/* RC5 audit fix: fullscreen surfaces hide all map chrome, not only the map tiles. */
+body.sheet-fullscreen .map-controls,body.overlay-fullscreen .map-controls{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+body.sheet-fullscreen #navBanner,body.overlay-fullscreen #navBanner{visibility:hidden!important}
+/* RC5 independent audit: keep Companion chrome consistently dark in Light/Auto map mode.
+   The theme choice changes the basemap; legacy mixed light/dark panels are not allowed to lose contrast. */
+.theme-light{--panel:#151b22;--panel2:#1b232c;--panel3:#232d37;--line:rgba(255,255,255,.11);--text:#f5f7f8;--muted:#a8b0b7;--shadow:0 16px 38px rgba(0,0,0,.36)}
+.theme-light .notif-strip{background:rgba(18,24,30,.94)!important}.theme-light .notif-drawer{background:rgba(16,22,28,.98)!important}.theme-light .iconbtn{background:rgba(255,255,255,.08)!important}.theme-light .expanded-nav{background:rgba(15,20,25,.98)!important}.theme-light .sheet-drag span{background:rgba(255,255,255,.30)!important}
+
+
+/* 0.7.9 RC6 — final iPhone polish */
+/* Joined sheets align exactly with the inset dock instead of spanning edge-to-edge. */
+.sheet.open:not(.fullscreen){left:10px!important;right:10px!important;width:auto!important}
+@media(max-width:390px){.sheet.open:not(.fullscreen){left:7px!important;right:7px!important}}
+
+/* Sonar is a view, not a second automatic ping: explicit close + saved controls. */
+.sonar-head-actions{display:flex!important;align-items:center!important;gap:7px!important;flex:0 0 auto!important}
+.sonar-close,.sonar-saved{width:38px!important;height:38px!important;min-width:38px!important;border-radius:12px!important;border:1px solid rgba(184,211,232,.18)!important;background:#12324d!important;color:#fff!important;font-size:20px!important;display:grid!important;place-items:center!important;padding:0!important}
+.sonar-close{font-size:22px!important}
+
+/* Native horizontal scrollbar in the full day carousel is redundant: dots are the indicator. */
+.day-carousel{scrollbar-width:none!important;-ms-overflow-style:none!important}
+.day-carousel::-webkit-scrollbar,.days-compact-track::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+.days-compact-track{scrollbar-width:none!important;-ms-overflow-style:none!important}
+
+/* Swipe actions exist only during an active horizontal gesture, never as a stuck state. */
+.planner-action-layer{opacity:0!important;transition:opacity .08s ease!important;pointer-events:none!important}
+.planner-swipe.is-swiping .planner-action-layer{opacity:1!important}
+.planner-swipe:not(.is-swiping)>.planner-card{transform:none!important}
+
+/* Full-screen modes always paint through the home-indicator area. */
+body.sheet-fullscreen,body.overlay-fullscreen,body.sheet-fullscreen #app,body.overlay-fullscreen #app{background:#071827!important}
+.sheet.fullscreen,.full-overlay.standard-full,.full-overlay.days-mode{min-height:100dvh!important;background:#071827!important}
+
+
+/* 0.7.9 RC7 — last-mile iPhone hardening */
+/* iOS can still paint its horizontal scroll indicator even when ::-webkit-scrollbar is hidden.
+   The opaque dot strip intentionally covers that redundant native indicator. */
+.full-overlay.days-mode .day-indicator{
+  position:relative!important;z-index:20!important;background:#071827!important;
+  margin-top:-12px!important;padding-top:12px!important;height:36px!important;flex-basis:36px!important;
+}
+.full-overlay.days-mode .day-carousel{padding-bottom:12px!important;-webkit-overflow-scrolling:auto!important}
+.full-overlay.days-mode .day-carousel::-webkit-scrollbar{display:none!important;-webkit-appearance:none!important;background:transparent!important}
+
+/* Half route list can always scroll its final card completely above the fixed add row. */
+.sheet.view-route.state-two .full-planner{padding-bottom:18px!important;scroll-padding-bottom:18px!important}
+
+/* Swipe action paint must be impossible without a live is-swiping state. */
+.planner-swipe:not(.is-swiping) .planner-action-layer{opacity:0!important;visibility:hidden!important}
+.planner-swipe.is-swiping .planner-action-layer{visibility:visible!important}
+
+
+/* 0.7.9 RC8 — final layout/gesture polish; keep working navigation untouched. */
+:root{--dock-side:10px}
+@media(max-width:390px){:root{--dock-side:7px}}
+.main-nav{left:var(--dock-side)!important;right:var(--dock-side)!important}
+
+/* Compact Days is exactly dock-aligned and text remains readable on any photo. */
+.full-overlay.days-compact .overlay-body{left:var(--dock-side)!important;right:var(--dock-side)!important;width:auto!important}
+.days-compact-panel{margin:0!important;width:100%!important;border-radius:23px 23px 0 0!important}
+.day-compact-card:after{background:linear-gradient(180deg,rgba(3,14,24,.06) 0%,rgba(3,14,24,.18) 38%,rgba(3,14,24,.92) 100%)!important}
+.day-compact-card>span{bottom:12px!important;text-shadow:0 2px 8px rgba(0,0,0,.95),0 1px 2px rgba(0,0,0,.95)!important}
+.day-compact-card b{color:#fff!important;font-weight:850!important;letter-spacing:.01em!important}.day-compact-card small{color:#edf5fb!important;font-weight:650!important}
+
+/* Full Days cards all have identical geometry, independent of portrait/landscape source image. */
+.full-overlay.days-mode .day-carousel{overflow-x:auto!important;overflow-y:hidden!important;height:calc(100% - 36px)!important;align-items:stretch!important}
+.full-overlay.days-mode .day-card{display:flex!important;flex-direction:column!important;height:100%!important;max-height:100%!important;overflow:hidden!important}
+.full-overlay.days-mode .day-card .hero{position:relative!important;flex:0 0 clamp(210px,31vh,260px)!important;height:clamp(210px,31vh,260px)!important;min-height:clamp(210px,31vh,260px)!important;max-height:clamp(210px,31vh,260px)!important;overflow:hidden!important}
+.full-overlay.days-mode .day-card .hero .photo-wrap,.full-overlay.days-mode .day-card .hero img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+.full-overlay.days-mode .day-card .hero:after{background:linear-gradient(180deg,rgba(2,10,17,.02) 25%,rgba(2,10,17,.82) 100%)!important}
+.full-overlay.days-mode .day-card .hero-copy{text-shadow:0 2px 9px rgba(0,0,0,.95)!important}
+.full-overlay.days-mode .day-card .day-content{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch!important;padding-bottom:14px!important}
+.full-overlay.days-mode .day-indicator{flex:0 0 36px!important;height:36px!important;margin:0!important;padding:10px 0 0!important;background:#071827!important}
+
+/* Route: remove competing horizontal day gesture; explicit prev/next controls. */
+.route-day-switch{touch-action:pan-y!important;margin:0!important;padding-bottom:5px!important}
+.route-title-copy{min-width:0!important;flex:1 1 auto!important}.route-title-copy h2{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.route-day-nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;gap:7px!important;flex:0 0 auto!important;margin:0 0 8px!important}
+.route-day-nav>span{font-size:10px!important;color:#9fb4c5!important;white-space:nowrap!important;text-align:center!important}
+.route-day-btn{min-height:34px!important;border-radius:11px!important;border:1px solid rgba(184,211,232,.18)!important;background:#12324d!important;color:#eef7fd!important;font-size:10px!important;font-weight:750!important;padding:6px 8px!important}
+.route-day-btn:last-child{text-align:right!important}.route-day-btn:first-child{text-align:left!important}.route-day-btn:disabled{opacity:.28!important}
+
+/* Route handle has a genuinely exclusive large hit target; content starts below it. */
+.sheet.view-route .sheet-drag{height:64px!important;z-index:120!important;pointer-events:auto!important;touch-action:none!important;background:transparent!important}
+.sheet.view-route .sheet-drag span{top:11px!important;width:48px!important;height:5px!important}
+.sheet.view-route.state-two .sheet-body{top:64px!important}
+.sheet.fullscreen.view-route .sheet-drag{top:var(--safe-top)!important;height:64px!important}
+.sheet.fullscreen.view-route .sheet-body{top:calc(var(--safe-top) + 64px)!important}
+
+/* Sonar view has its own explicit ping; compact logo tap outside the view only pings on the map. */
+.sonar-ping,.sonar-close,.sonar-saved{width:38px!important;height:38px!important;min-width:38px!important;border-radius:12px!important;border:1px solid rgba(184,211,232,.18)!important;background:#12324d!important;color:#fff!important;display:grid!important;place-items:center!important;padding:0!important}
+.sonar-ping svg{width:20px!important;height:20px!important}.sonar-head-actions{gap:6px!important}
+@media(max-width:390px){.sonar-ping,.sonar-close,.sonar-saved{width:34px!important;height:34px!important;min-width:34px!important}.sonar-head-actions{gap:4px!important}}
+
+/* Notifications use the same non-sticky swipe paint rule as itinerary cards. */
+.notif-swipe{position:relative!important;overflow:hidden!important;border-radius:15px!important;isolation:isolate!important}
+.notif-swipe .notif-action{opacity:0!important;pointer-events:none!important;transition:opacity .06s linear!important}
+.notif-swipe.is-swiping.to-left .notif-action.dismiss,.notif-swipe.is-swiping.to-right .notif-action.context{opacity:1!important}
+.notif-swipe:not(.is-swiping) .notif-card{transform:none!important}
+
+
+/* 0.8.0 beta1 — Professionalization pass. Additive only: stable RC8 map/sheet/navigation geometry is preserved. */
+:root{
+ --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;
+ --radius-sm:12px;--radius-md:16px;--radius-lg:22px;--tap:44px;
+ --motion-fast:120ms;--motion-base:180ms;--motion-slow:260ms;
+}
+.route-smart-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 9px;flex:0 0 auto}
+.route-smart-btn{min-height:40px;border-radius:12px;border:1px solid rgba(184,211,232,.15);background:#102f49;color:#eaf5fc;font-size:10.5px;font-weight:800;padding:8px 10px}
+.route-smart-btn:first-child{background:linear-gradient(135deg,#173e5f,#15344f);border-color:rgba(97,180,240,.3)}
+.pro-tool-hero{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;background:linear-gradient(135deg,#12334f,#0e2a42);border:1px solid rgba(115,190,240,.22);border-radius:18px;padding:14px;margin-bottom:12px}
+.pro-tool-hero>span{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:#183f60;font-size:23px}.pro-tool-hero b{display:block;font-size:15px}.pro-tool-hero small{display:block;color:#abc1d1;font-size:11px;line-height:1.45;margin-top:3px}
+.optimizer-list{display:grid;gap:7px}.optimizer-row{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;background:#102a43;border:1px solid rgba(184,211,232,.12);border-radius:14px;padding:10px}.optimizer-row>span{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#173853;font-weight:850;font-size:11px}.optimizer-row b{display:block;font-size:12.5px}.optimizer-row small{display:block;color:#91aabe;font-size:9.5px;margin-top:2px}.optimizer-row.fixed{opacity:.62}.pro-note{margin:12px 0;color:#91aabe;font-size:10.5px;line-height:1.5}.pro-primary{width:100%;min-height:50px;border:0;border-radius:14px;background:#2e78d8;color:#fff;font-weight:850;font-size:13px}
+
+/* First-use tutorial: one focused card, no long manual. */
+.coach-overlay{position:fixed;inset:0;z-index:5000;display:block;pointer-events:auto}.coach-overlay.hidden{display:none}.coach-scrim{position:absolute;inset:0;background:rgba(2,10,18,.60);backdrop-filter:blur(2px)}
+.coach-card{position:absolute;z-index:3;left:14px;right:14px;bottom:calc(var(--safe-bottom) + 92px);background:linear-gradient(160deg,#102f49,#0a2135);border:1px solid rgba(166,211,241,.22);border-radius:22px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.48)}.coach-card.coach-top{bottom:auto;top:calc(var(--safe-top) + 76px)}
+.coach-progress{display:flex;gap:5px;margin-bottom:14px}.coach-progress i{height:4px;flex:1;border-radius:999px;background:rgba(255,255,255,.12)}.coach-progress i.on{background:#d43b43}.coach-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#173e5d;border:1px solid rgba(255,255,255,.1);font-size:23px;margin-bottom:12px}.coach-card h2{font-size:19px;margin:0 0 7px}.coach-card p{font-size:12.5px;line-height:1.55;color:#b4c8d7;margin:0}.coach-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}.coach-actions button{border-radius:13px;border:1px solid rgba(184,211,232,.15);background:#12314b;color:#dceaf3;font-weight:800}.coach-actions button.primary{background:#2e78d8;border-color:#2e78d8;color:#fff}
+.coach-focus{position:absolute;z-index:2;border-radius:18px;border:2px solid rgba(103,199,255,.92);box-shadow:0 0 0 4px rgba(76,173,237,.16),0 0 28px rgba(76,173,237,.42);pointer-events:none}
+
+@media(max-width:390px){.route-smart-btn{font-size:9.8px}.coach-card{left:10px;right:10px}}

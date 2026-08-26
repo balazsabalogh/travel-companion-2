@@ -1,0 +1,26 @@
+{
+  "pass": 19,
+  "total": 19,
+  "failed": [],
+  "checks": {
+    "version_rc6": true,
+    "logo_short_ping": true,
+    "logo_hold_opens_view_without_run": true,
+    "sonar_close_button": true,
+    "sonar_close_closes_sheet": true,
+    "sonar_four_one_row": true,
+    "joined_sheet_inset": true,
+    "day_native_scrollbar_hidden": true,
+    "swipe_only_during_gesture": true,
+    "swipe_pointercancel": true,
+    "swipe_lostcapture": true,
+    "fullscreen_map_hidden": true,
+    "generated_fallback_inline": true,
+    "all_generated_assets_exist": true,
+    "all_generated_cached": true,
+    "generated_images_valid": true,
+    "nav_steps_preserved": true,
+    "route_reorder_preserved": true,
+    "guide_route_nav_order": true
+  }
+}

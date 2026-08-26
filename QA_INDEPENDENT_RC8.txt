@@ -1,0 +1,21 @@
+PASS | 390 compact Days aligns to dock | {'aL': 7, 'aR': 383, 'nL': 7, 'nR': 383, 'pL': 8, 'pR': 382, 'shadow': 'rgba(0, 0, 0, 0.95) 0px 2px 8px, rgba(0, 0, 0, 0.95) 0px 1px 2px', 'grad': 'linear-gradient(rgba(3, 14, 24, 0.06) 0%, rgba(3, 14, 24, 0.18) 38%, rgba(3, 14, 24, 0.92) 100%)'}
+PASS | Compact Days captions have gradient + text shadow | ('rgba(0, 0, 0, 0.95) 0px 2px 8px, rgba(0, 0, 0, 0.95) 0px 1px 2px', 'linear-gradient(rgba(3, 14, 24, 0.06) 0%, rgba(3, ')
+PASS | Rapid menu switching never stacks sheet/overlay/notification drawer | [('route', {'sheet': 'two', 'overlay': False, 'notif': False, 'hold': False}), ('days', {'sheet': 'closed', 'overlay': True, 'notif': False, 'hold': False}), ('settings', {'sheet': 'closed', 'overlay': True, 'notif': False, 'hold': False}), ('notifications', {'sheet': 'closed', 'overlay': False, 'notif': True, 'hold': False}), ('favorites', {'sheet': 'closed', 'overlay': True, 'notif': False, 'hold': False}), ('route2', {'sheet': 'two', 'overlay': False, 'notif': False, 'hold': False})]
+PASS | Short logo tap closes active panel and pings without opening Sonar view | {'overlayHidden': True, 'sheet': 'closed', 'view': 'route', 'sonar': True}
+PASS | Long logo opens Sonar view with Ping + Close | {'sheet': 'two', 'view': 'sonar', 'ping': True, 'close': True, 'tops': [518, 518, 518, 518]}
+PASS | Sonar 250/500/1km/2km remain one row at 390 | [518, 518, 518, 518]
+PASS | Sonar in-view Ping keeps panel open
+PASS | Sonar Close fully closes it
+PASS | Route shows explicit Previous/Next buttons | {'prev': True, 'next': True, 'old': False, 'hb': 419, 'bt': 419, 'day': 1}
+PASS | Route panel horizontal day-swipe is disabled | {'prev': True, 'next': True, 'old': False, 'hb': 419, 'bt': 419, 'day': 1}
+PASS | Route handle hit-zone is exclusive above body | {'prev': True, 'next': True, 'old': False, 'hb': 419, 'bt': 419, 'day': 1}
+PASS | Next day button changes day exactly once | 1->2
+PASS | Route handle tap toggles to full | full
+PASS | All full Day cards equal height @390 | [670, 670, 670, 670, 670, 670, 670, 670]
+PASS | All full Day heroes incl Day 4 equal height | [260, 260, 260, 260, 260, 260, 260, 260]
+PASS | Full Day cards prevent geometry spill | [{'h': 670, 'hero': 260, 'ov': 'hidden'}, {'h': 670, 'hero': 260, 'ov': 'hidden'}]
+PASS | Cancelled notification swipe resets completely | {'cl': 'notif-swipe', 'tr': ''}
+PASS | Every POI has an embedded or existing local offline image fallback | []
+PASS | Every rendered route image has src + fallback | [('data:image/jpeg;base64', 'data:image/jpeg;base64'), ('data:image/jpeg;base64', 'data:image/jpeg;base64')]
+PASS | No runtime JS exceptions during independent stress flow | []
+TOTAL 20/20 PASS

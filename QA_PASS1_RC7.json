@@ -1,0 +1,24 @@
+{
+  "perspective": "developer implementation QA",
+  "pass": 16,
+  "total": 16,
+  "failed": [],
+  "checks": {
+    "rc7_version": true,
+    "embedded_fallback_bundle": true,
+    "critical_poi_embedded": true,
+    "offline_photo_prefers_embedded": true,
+    "image_onerror_uses_embedded_dataset": true,
+    "planner_reset_function": true,
+    "planner_touch_cancel": true,
+    "planner_lost_capture": true,
+    "planner_global_release_cleanup": true,
+    "planner_visual_hidden_unless_live": true,
+    "day_pager_covers_native_indicator": true,
+    "route_last_card_clearance": true,
+    "sheet_inset_preserved": true,
+    "fullscreen_no_map_bleed": true,
+    "sonar_short_and_hold_preserved": true,
+    "source_fallback_images_valid": true
+  }
+}

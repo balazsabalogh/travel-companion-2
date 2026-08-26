@@ -1,0 +1,45 @@
+PASS APP_VERSION is 0.8.0-beta1 
+PASS version.json matches 
+PASS service worker cache bumped 
+PASS version.json uses network-first SW path 
+PASS Onboarding functions 
+PASS Tour replay setting 
+PASS Update check 
+PASS Update notification action 
+PASS Route optimizer 
+PASS Optimizer requires apply 
+PASS Google Maps day export 
+PASS Route smart buttons 
+PASS No fabricated rating system 
+PASS Logo short tap still runSonar 
+PASS Logo hold still opens Sonar view 
+PASS Transit Apple present 
+PASS Transit Google present 
+PASS Route reorder present 
+PASS Notification cancel reset 
+PASS Day explicit prev/next 
+PASS POI primary order 
+PASS Coach overlay exists 
+PASS No risky global button sizing 
+PASS RC8 geometry CSS retained 
+PASS Fullscreen map bleed guard retained 
+PASS Generated image fallback retained 
+PASS All service worker CORE assets exist 
+PASS All local HTML refs exist 
+PASS Optimizer not auto-applied 
+PASS Onboarding does not auto-open for existing users 
+PASS Navigation regression: fetchNavigationRoute unchanged 
+PASS Navigation regression: navDirection unchanged 
+PASS Navigation regression: navStepsHTML unchanged 
+PASS Navigation regression: closeNavigationSteps unchanged 
+PASS Navigation regression: showNavigationSteps unchanged 
+PASS Navigation regression: openExternalTransit unchanged 
+PASS Navigation regression: showNavigationChoice unchanged 
+PASS Navigation regression: startNavigation unchanged 
+PASS Navigation regression: renderNavBanner unchanged 
+PASS Navigation regression: endNavigation unchanged 
+PASS Navigation regression: renderNavSheet unchanged 
+PASS Navigation regression: navigationMain unchanged 
+PASS Navigation regression: drawNavigationRoute unchanged 
+
+43/43 PASS

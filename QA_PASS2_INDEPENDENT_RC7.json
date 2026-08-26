@@ -1,0 +1,31 @@
+{
+  "perspective": "independent senior developer regression audit",
+  "pass": 22,
+  "total": 22,
+  "failed": [],
+  "checks": {
+    "navigation_frozen_navDirection": true,
+    "navigation_frozen_navStepsHTML": true,
+    "navigation_frozen_closeNavigationSteps": true,
+    "navigation_frozen_showNavigationSteps": true,
+    "navigation_frozen_startNavigation": true,
+    "navigation_frozen_renderNavBanner": true,
+    "navigation_frozen_bindNavBannerSwipe": true,
+    "navigation_frozen_openExternalTransit": true,
+    "navigation_frozen_endNavigation": true,
+    "navigation_frozen_navigationMain": true,
+    "no_generated_asset_dependency_for_primary_fallback": true,
+    "embedded_fallback_covers_all_cat_types": true,
+    "every_category_embedded": true,
+    "generic_embedded": true,
+    "swipe_cleanup_on_app_interruption": true,
+    "day_has_single_authored_indicator": true,
+    "ios_native_indicator_masked": true,
+    "route_buttons_not_changed": true,
+    "reorder_not_removed": true,
+    "poi_actions_preserved": true,
+    "service_worker_new_cache": true,
+    "html_cache_bust_rc7": true
+  },
+  "limitation": "Browser/device emulation is blocked by environment policy in this session; physical iPhone remains final dynamic check."
+}

@@ -1,0 +1,40 @@
+PASS RC8 version
+PASS Route day swipe binder removed from render
+PASS Explicit previous day route button
+PASS Explicit next day route button
+PASS Route handle 64px exclusive
+PASS Compact Days dock-side aligned
+PASS Compact Days stronger gradient
+PASS Full Days fixed hero geometry
+PASS Sonar in-view ping control
+PASS Logo tap closes transient panels before ping
+PASS Notification swipe pointer cancel reset
+PASS Notification action only live swipe
+PASS Query cache bust RC8
+PASS Core function startNavigation
+PASS Core function drawNavigationRoute
+PASS Core function renderNavBanner
+PASS Core function showNavigationSteps
+PASS Core function openExternalTransit
+PASS Core function transitUrl
+PASS Core function bindPlannerReorder
+PASS Core function renderSonarSheet
+PASS Core function showDays
+PASS Core function showDaysCompact
+PASS Core function showSettings
+PASS Core function showFavorites
+PASS Core function renderGuideSheet
+PASS Navigation unchanged transitUrl — 321/321
+PASS Navigation unchanged openExternalTransit — 384/384
+PASS Navigation unchanged showNavigationChoice — 766/766
+PASS Navigation unchanged startNavigation — 498/498
+PASS Navigation unchanged drawNavigationRoute — 571/571
+PASS Navigation unchanged renderNavBanner — 1059/1059
+PASS Navigation unchanged nextNavigationTarget — 418/418
+PASS Navigation unchanged hideNavigationUI — 130/130
+PASS Navigation unchanged endNavigation — 339/339
+PASS Navigation unchanged navigationMain — 270/270
+PASS All local SW assets exist
+PASS All bundled raster images decode
+PASS Generated fallback mapping present
+RESULT 39/39 PASS

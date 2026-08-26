@@ -1,0 +1,70 @@
+PASS Balanced JS braces 830 / 830
+PASS Balanced CSS braces 1163 / 1163
+PASS Unique function startTour 
+PASS Unique function renderTourStep 
+PASS Unique function finishTour 
+PASS Unique function checkForUpdate 
+PASS Unique function refreshApp 
+PASS Unique function routePathKm 
+PASS Unique function optimizedRemainingOrder 
+PASS Unique function showRouteOptimizer 
+PASS Unique function openDayInGoogleMaps 
+PASS UI selector data-route-opt has markup/handler count=2
+PASS UI selector data-route-gmaps has markup/handler count=2
+PASS UI selector data-tour has markup/handler count=6
+PASS UI selector data-update-check has markup/handler count=2
+PASS UI selector data-apply-opt has markup/handler count=2
+PASS UI selector data-tour-next has markup/handler count=2
+PASS UI selector data-tour-skip has markup/handler count=2
+PASS Optimizer excludes done points 
+PASS Optimizer excludes skipped points 
+PASS Optimizer replaces only unfinished slots 
+PASS Optimizer captures return sheet before opening overlay 
+PASS Optimizer requires explicit user apply 
+PASS Optimizer snapshots before mutation 
+PASS Optimizer saves after apply 
+PASS Transit export does not build fake multi-stop transit 
+PASS Google export uses official Maps URL 
+PASS Existing users are not auto-interrupted 
+PASS Tour completion persisted 
+PASS Tour is replayable from settings 
+PASS Tour has skip and finish 
+PASS Update check is silent on init 
+PASS Update check does not rely on cached version 
+PASS SW version fetch network-first 
+PASS Update is opt-in via notification 
+PASS Logo short tap pings without opening Sonar 
+PASS Logo long press opens Sonar view 
+PASS Route card swipe reset retained 
+PASS Notification swipe reset retained 
+PASS Route reorder uses dedicated drag handle 
+PASS Full day fixed hero geometry retained 
+PASS Compact day dock alignment retained 
+PASS Fullscreen map bleed guards retained 
+PASS Transit provider choices retained 
+PASS Navigation steps retained 
+PASS Every POI category has a generated fallback missing=[]
+PASS Generated fallback exists: hotel 
+PASS Generated fallback exists: attraction 
+PASS Generated fallback exists: wc 
+PASS Generated fallback exists: coffee 
+PASS Generated fallback exists: food 
+PASS Generated fallback exists: waterfall 
+PASS Generated fallback exists: bar 
+PASS Generated fallback exists: museum 
+PASS Generated fallback exists: beach 
+PASS Generated fallback exists: ancient 
+PASS Generated fallback exists: shop 
+PASS Generated fallback exists: historic 
+PASS Generated fallback exists: park 
+PASS Generated fallback exists: marina 
+PASS Android maskable 192 
+PASS Android maskable 512 
+PASS iOS apple touch icon exists 
+PASS Professional CSS does not reposition main nav 
+PASS Professional CSS does not change sheet geometry 
+PASS Professional CSS does not change navigation banner 
+PASS No stale rc8 app version 
+PASS Index cache-buster updated 
+
+68/68 PASS

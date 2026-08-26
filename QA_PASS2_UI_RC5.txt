@@ -1,0 +1,20 @@
+PASS single surface after route — 1
+PASS single surface after days — 1
+PASS single surface after favorites — 1
+PASS single surface after settings — 1
+PASS single surface after notifications — 1
+PASS single surface after navigation — 1
+PASS logo home clears surfaces — 0
+PASS route long hold fullscreen 
+PASS route fullscreen map hidden 
+PASS route fullscreen map controls hidden 
+PASS route handle full to half 
+PASS 390 sonar radius row — [522.6, 522.8, 522.8, 522.9]
+PASS steps overlay one surface — 1
+PASS steps overlay hides map controls 
+PASS steps overlay opaque class 
+PASS steps map return clears overlay 
+PASS mini survives stress 
+PASS mini no action layer 
+
+Independent UI pass: 18/18
