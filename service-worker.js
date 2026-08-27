@@ -1,4 +1,4 @@
-const CACHE='tc-antalya-080-beta1';
+const CACHE='tc-antalya-081-beta2';
 const CORE=[
 './','./index.html','./app.css','./app.js','./manifest.webmanifest','./version.json','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./icon-maskable-192.png','./icon-maskable-512.png','./assets/logo-tr.png','./assets/app-icon-day.png','./assets/offline-map.svg',
 './assets/photos/hadrian.jpg','./assets/photos/konyaalti.jpg','./assets/photos/duden.png','./assets/photos/perge.jpg','./assets/photos/kursunlu.jpg','./assets/photos/phaselis.jpg',
